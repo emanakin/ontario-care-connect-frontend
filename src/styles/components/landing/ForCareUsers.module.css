@@ -1,0 +1,116 @@
+.container {
+  background: #f3f9fc; /* A light background to match the style */
+  padding: 2rem 1rem;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+}
+
+/* When flipped, reverse the order of columns */
+.flipped {
+  flex-direction: row-reverse;
+}
+
+.text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.text h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1b262c;
+  margin-bottom: 1rem;
+}
+
+.text p {
+  font-size: 1rem;
+  color: #4f5e63;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Card styling reused from the concept of HowItWorksCard but adjusted here */
+.card {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon {
+  background: #e8f3f9;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1b262c;
+  margin: 0 0 0.25rem;
+}
+
+.card p {
+  font-size: 0.875rem;
+  color: #4f5e63;
+  margin: 0;
+}
+
+/* Image Section */
+.image {
+  flex: 1;
+}
+
+.imageWrapper {
+  position: relative;
+}
+
+.blueBlock {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+  height: 120px;
+  background: #0f4c75;
+  border-radius: 0.5rem;
+  z-index: -1; /* behind the image */
+}
+
+.imageWrapper img {
+  width: 400px;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .blueBlock {
+    display: none; /* hide the block on very small screens if desired */
+  }
+}

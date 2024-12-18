@@ -1,0 +1,202 @@
+/* Container */
+.container {
+  padding: 0.6rem 1.5rem;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  position: relative; /* for positioning mobile menu */
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Section */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+}
+
+.logo img {
+  max-width: 175px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Navigation Links */
+.links {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  white-space: nowrap;
+}
+
+.linkWrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.link,
+.selectedLink {
+  color: #1b262c;
+  font-size: clamp(0.875rem, 1vw, 1rem);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.link:hover {
+  color: #0f4c75;
+}
+
+.selectedLink {
+  color: #0f4c75;
+}
+
+.underline {
+  position: absolute;
+  bottom: -0.05rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0.35rem;
+  height: 0.35rem;
+  background: #0f4c75;
+  border-radius: 50%;
+  margin-top: 0.25rem;
+}
+
+/* Buttons Section */
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 0.5rem;
+}
+
+.login {
+  color: #1b262c;
+  font-size: clamp(0.875rem, 1vw, 1rem);
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.login:hover {
+  color: #0f4c75;
+}
+
+.divider {
+  color: #697177;
+  cursor: default;
+}
+
+.registerButton {
+  padding: 0.8rem 1.25rem;
+  border-radius: 0.625rem;
+  background: #0f4c75;
+  color: #ffffff;
+  font-size: clamp(0.875rem, 1vw, 1rem);
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.2;
+}
+
+.registerButton:hover {
+  background: #0a314b;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 0.2rem;
+  cursor: pointer;
+}
+
+.bar {
+  width: 1.5rem;
+  height: 0.2rem;
+  background-color: #1b262c;
+  border-radius: 0.25rem;
+}
+
+/* Mobile Menu (Side Drawer) */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  max-width: 300px;
+  height: 100vh;
+  background-color: #ffffff;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 100;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobileMenu.open {
+  transform: translateX(0);
+}
+
+/* Mobile-only link styling in side menu */
+.mobileLink {
+  color: #1b262c;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mobileLink:hover {
+  color: #0f4c75;
+}
+
+/* Close button for mobile menu */
+.closeButton {
+  position: absolute;
+  align-self: flex-end;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #1b262c;
+}
+
+.closeButton:hover {
+  color: #0f4c75;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .links {
+    display: none; /* Hide desktop links */
+  }
+
+  .buttons {
+    display: none; /* Hide login/register on mobile */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobileMenu {
+    display: none; /* Ensure mobile menu is hidden on desktop */
+  }
+}

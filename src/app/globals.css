@@ -1,21 +1,62 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
+/* Root Variables */
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --text-primary: #1b262c; /* For h1 */
+  --text-secondary: #3282b8; /* For h2 */
+  --text-tertiary: #0f4c75; /* For h3 */
+  --text-body: #697177; /* For p */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Global Styles */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text-body);
+  font-family: "Poppins", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Reset Margins for Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-style: normal;
+}
+
+/* Paragraph */
+p {
+  margin: 0 0 1.5rem; /* Space between paragraphs */
+  color: var(--text-body);
+  font-size: clamp(0.875rem, 1vw, 1rem); /* Responsive scaling */
+  font-weight: 400;
+  line-height: 1.5625rem; /* Matches desktop */
+}
+
+/* Headings */
+h1 {
+  color: var(--text-primary);
+  font-size: clamp(2rem, 5vw, 3.125rem); /* Responsive scaling */
+  font-weight: 700;
+  line-height: 3.75rem; /* Matches desktop */
+}
+
+h2 {
+  color: var(--text-secondary);
+  font-size: clamp(1.5rem, 4vw, 2.125rem); /* Responsive scaling */
+  font-weight: 600;
+  line-height: 3.125rem; /* Matches desktop */
+}
+
+h3 {
+  color: var(--text-tertiary);
+  font-size: clamp(1rem, 2vw, 1.125rem); /* Responsive scaling */
+  font-weight: 600;
+  line-height: 1.625rem; /* Matches desktop */
 }

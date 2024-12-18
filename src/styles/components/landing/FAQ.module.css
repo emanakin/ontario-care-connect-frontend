@@ -1,0 +1,59 @@
+.container {
+  background: #f3f9fc;
+  padding: 2rem 1rem;
+}
+
+.content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1b262c;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.content p {
+  font-size: 1rem;
+  color: #4f5e63;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Left side container for FAQs */
+.row .col:first-child {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+/* Right side container for ContactForm */
+.row .col:last-child {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .row .col {
+    max-width: 100%;
+  }
+}

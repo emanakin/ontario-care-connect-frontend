@@ -1,0 +1,93 @@
+.container {
+  background: #f3f9fc; /* Light background similar to previous sections */
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  box-shadow: 0px 10px 20px rgba(50, 130, 184, 0.05);
+}
+
+.heading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #3282b8;
+  margin-bottom: 1.5rem;
+}
+
+/* Textarea styling based on your specs */
+.message {
+  width: 100%;
+  min-height: 200px;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(50, 130, 184, 0.1);
+  background: #fff;
+  box-shadow: 0px 10px 20px rgba(50, 130, 184, 0.05);
+  font-size: 1rem;
+  color: #4f5e63;
+  resize: vertical;
+  margin-bottom: 1rem;
+}
+
+/* Email input and button row */
+.formRow {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Email input styling */
+.emailInput {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(50, 130, 184, 0.1);
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(50, 130, 184, 0.05);
+  font-size: 1rem;
+  color: #4f5e63;
+}
+
+/* Send button styling */
+.sendButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  background: #3282b8;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0px 10px 20px rgba(50, 130, 184, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+.sendButton:hover {
+  background: #1a5f87;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .message {
+    min-height: 150px;
+  }
+
+  .formRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .emailInput,
+  .sendButton {
+    width: 100%;
+  }
+
+  .sendButton {
+    margin-top: 1rem;
+  }
+}
