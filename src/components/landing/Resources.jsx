@@ -1,49 +1,92 @@
+"use client";
+
+import { useRef, useState } from "react";
 import styles from "@/styles/components/landing/Resources.module.css";
 import ArticleCard from "./ArticleCard";
-
-// Test objects for demonstration
-const articles = [
-  {
-    image: "/article1.jpg",
-    title: "Title here... Tittle here... Tittle here...",
-    body: "uses a dictionary of over 200 latin words, combined with a handful of model...",
-    link: "#",
-  },
-  {
-    image: "/article2.png",
-    title: "Title here... Tittle here... Tittle here...",
-    body: "uses a dictionary of over 200 latin words, combined with a handful of model...",
-    link: "#",
-  },
-  {
-    image: "/article3.png",
-    title: "Title here... Tittle here... Tittle here...",
-    body: "uses a dictionary of over 200 latin words, combined with a handful of model...",
-    link: "#",
-  },
-  {
-    image: "/article4.jpg",
-    title: "Title here... Tittle here... Tittle here...",
-    body: "uses a dictionary of over 200 latin words, combined with a handful of model...",
-    link: "#",
-  },
-];
+import { motion } from "framer-motion";
 
 export default function Resources() {
+  const carouselRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+
+  const articles = [
+    {
+      image: "/article1.jpg",
+      title: "Title here... Tittle here... Tittle here...",
+      body: "uses a dictionary of over 200 latin words, combined with a handful of model...",
+      link: "#",
+    },
+    {
+      image: "/article2.png",
+      title: "Title here... Tittle here... Tittle here...",
+      body: "uses a dictionary of over 200 latin words, combined with a handful of model...",
+      link: "#",
+    },
+    {
+      image: "/article3.png",
+      title: "Title here... Tittle here... Tittle here...",
+      body: "uses a dictionary of over 200 latin words, combined with a handful of model...",
+      link: "#",
+    },
+    {
+      image: "/article4.jpg",
+      title: "Title here... Tittle here... Tittle here...",
+      body: "uses a dictionary of over 200 latin words, combined with a handful of model...",
+      link: "#",
+    },
+    {
+      image: "/article5.jpg",
+      title: "New Article Title Here...",
+      body: "Another interesting article description goes here with some engaging content...",
+      link: "#",
+    },
+  ];
+
+  const scroll = (direction) => {
+    if (carouselRef.current) {
+      const scrollAmount = 280; // card width + gap
+      carouselRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <section className={styles.container}>
-      <div className={styles.content}>
+      <motion.div
+        className={styles.content}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
         <div className={styles.topRow}>
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
             <h2>Our Resource & Guide</h2>
             <p>
               BeHome nursing home care services encompass a range of
               compassionate care options, including in-home personal care
             </p>
-          </div>
-          <div className={styles.carouselControls}>
-            <div className={styles.controlButton}>
-              {/* Left Arrow Icon */}
+          </motion.div>
+          <motion.div
+            className={styles.carouselControls}
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <motion.div
+              className={styles.controlButton}
+              whileHover={{ scale: 1.05, background: "#08415f" }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => scroll("left")}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -56,9 +99,13 @@ export default function Resources() {
                   fill="#fff"
                 />
               </svg>
-            </div>
-            <div className={styles.controlButton}>
-              {/* Right Arrow Icon */}
+            </motion.div>
+            <motion.div
+              className={styles.controlButton}
+              whileHover={{ scale: 1.05, background: "#08415f" }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => scroll("right")}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -71,22 +118,33 @@ export default function Resources() {
                   fill="#fff"
                 />
               </svg>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
 
-        <div className={styles.carousel}>
+        <motion.div
+          ref={carouselRef}
+          className={styles.carousel}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          drag="x"
+          dragConstraints={{ left: -1000, right: 0 }}
+          onDragStart={() => setIsDragging(true)}
+          onDragEnd={() => setIsDragging(false)}
+          dragElastic={0.2}
+        >
           {articles.map((article, idx) => (
             <ArticleCard
               key={idx}
-              image={article.image}
-              title={article.title}
-              body={article.body}
-              link={article.link}
+              {...article}
+              delay={0.1 * idx}
+              isDragging={isDragging}
             />
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

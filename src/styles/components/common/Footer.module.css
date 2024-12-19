@@ -1,6 +1,6 @@
 .container {
   background: #1b262c;
-  padding: 2rem 1rem;
+  padding: 3rem 1.5rem;
   color: #ffffff;
 }
 
@@ -12,48 +12,52 @@
 .topRow {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
 }
 
-/* Left side: Logo + Nav */
 .leftSection {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  cursor: pointer;
 }
 
-.logoText {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #ffffff;
-}
-
-/* Navigation Links */
 .nav {
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .nav a {
   color: #ffffff;
   font-size: 0.875rem;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-.nav a:hover {
-  color: #cccccc;
+.nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
 }
 
-/* Right side: Stay Connected + Icons */
+.nav a:hover::after {
+  width: 100%;
+}
+
 .rightSection {
   display: flex;
   align-items: center;
@@ -75,16 +79,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
 }
 
 .socialIcons a:hover {
-  opacity: 0.8;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .divider {
   border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   margin: 2rem 0;
 }
 
@@ -94,6 +101,51 @@
 
 .bottomRow p {
   font-size: 0.875rem;
-  color: #cccccc;
+  color: rgba(255, 255, 255, 0.7);
   margin: 0;
+}
+
+@media (max-width: 992px) {
+  .leftSection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .nav {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .topRow {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .rightSection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .nav {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .socialIcons {
+    width: 100%;
+    justify-content: space-between;
+  }
 }

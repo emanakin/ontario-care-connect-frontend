@@ -7,10 +7,10 @@
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: wrap; /* allow wrapping on smaller screens */
+  gap: 4rem;
+  padding: 2rem;
 }
 
 /* When flipped, reverse the order of columns */
@@ -40,25 +40,32 @@
 .cards {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 /* Card styling reused from the concept of HowItWorksCard but adjusted here */
 .card {
   background: #ffffff;
-  border-radius: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
   display: flex;
   align-items: center;
   gap: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .icon {
-  background: #e8f3f9;
+  background: rgba(50, 130, 184, 0.1);
   border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3rem;
+  height: 3rem;
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -85,32 +92,64 @@
 
 .imageWrapper {
   position: relative;
+  width: 500px;
+  height: 400px;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 .blueBlock {
   position: absolute;
-  bottom: 0;
+  right: -2rem; /* Move block to the right */
+  bottom: -2rem; /* Move block down */
   width: 200px;
-  height: 120px;
+  height: 180px;
   background: #0f4c75;
   border-radius: 0.5rem;
-  z-index: -1; /* behind the image */
-}
-
-.imageWrapper img {
-  width: 400px;
-  height: auto;
-  border-radius: 1rem;
-  object-fit: cover;
+  z-index: 0;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .content {
     flex-direction: column;
+    gap: 3rem;
+  }
+
+  .text {
+    max-width: 100%;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    aspect-ratio: 4/3;
   }
 
   .blueBlock {
-    display: none; /* hide the block on very small screens if desired */
+    right: -1rem;
+    bottom: -1rem;
+    width: 150px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .blueBlock {
+    width: 100px;
+    height: 80px;
   }
 }

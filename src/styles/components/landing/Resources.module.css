@@ -1,6 +1,7 @@
 .container {
   padding: 4rem 1rem;
   text-align: left;
+  overflow: hidden;
 }
 
 .content {
@@ -60,13 +61,22 @@
 .carousel {
   display: flex;
   gap: 1.5rem;
-  overflow-x: auto; /* simple horizontal scroll for demonstration */
-  scrollbar-width: none; /* Hide scrollbar in Firefox */
-  -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+  overflow-x: auto;
+  cursor: grab;
+  padding: 1rem 0;
+  margin: 0 -1rem;
+  padding: 1rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .carousel::-webkit-scrollbar {
-  display: none; /* Hide scrollbar in Chrome/Safari */
+  display: none;
+}
+
+.carousel:active {
+  cursor: grabbing;
 }
 
 /* Responsive adjustments */
@@ -80,6 +90,15 @@
   .container p {
     margin-bottom: 1.5rem;
   }
+
+  .carousel {
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+
+  .card {
+    flex: 0 0 260px;
+  }
 }
 
 .card {
@@ -87,12 +106,13 @@
   border-radius: 1rem;
   box-shadow: 0px 10px 20px rgba(50, 130, 184, 0.05);
   overflow: hidden;
-  flex: 0 0 250px; /* Fixed width so cards line up horizontally */
+  flex: 0 0 280px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+  user-select: none;
 }
 
 .card:hover {

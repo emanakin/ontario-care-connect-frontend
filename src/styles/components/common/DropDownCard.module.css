@@ -3,16 +3,27 @@
   margin-bottom: 1rem;
 }
 
-/* Collapsed card style */
 .card {
   background: #ffffff;
   border-radius: 0.75rem;
-  box-shadow: 0px 10px 20px rgba(50, 130, 184, 0.05);
+  box-shadow: 0px 8px 20px rgba(50, 130, 184, 0.05);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.5rem;
+  padding: 1.25rem 1.5rem;
   cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(50, 130, 184, 0.1);
+  will-change: transform;
+}
+
+.card.expanded {
+  background: #f8fbfd;
+  border-color: rgba(50, 130, 184, 0.15);
+}
+
+.card:hover {
+  box-shadow: 0px 12px 24px rgba(50, 130, 184, 0.08);
 }
 
 .card h4 {
@@ -20,32 +31,67 @@
   font-size: 1rem;
   font-weight: 600;
   color: #1b262c;
+  transition: color 0.3s ease;
+}
+
+.card:hover h4 {
+  color: #3282b8;
 }
 
 .button {
   background: #3282b8;
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: 0.5rem;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
+  will-change: transform;
 }
 
 .button svg {
   display: block;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
-/* Expanded portion */
 .expandedCard {
   background: #ffffff;
   border-radius: 0.75rem;
-  box-shadow: 0px 10px 20px rgba(50, 130, 184, 0.05);
+  box-shadow: 0px 8px 20px rgba(50, 130, 184, 0.05);
   margin-top: 0.5rem;
-  padding: 1rem 1.5rem;
-  font-size: 0.875rem;
-  color: #4f5e63;
-  line-height: 1.5;
+  padding: 1.25rem 1.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(50, 130, 184, 0.1);
 }
 
-/* Optional: If you implement an actual toggle, you could hide/show with transitions */
+.expandedCard p {
+  margin: 0;
+  font-size: 0.925rem;
+  color: #4f5e63;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 1rem 1.25rem;
+  }
+
+  .button {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .expandedCard {
+    padding: 1rem 1.25rem;
+  }
+
+  .card h4 {
+    font-size: 0.925rem;
+  }
+
+  .expandedCard p {
+    font-size: 0.875rem;
+  }
+}

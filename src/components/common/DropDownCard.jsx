@@ -2,16 +2,35 @@
 
 import { useState } from "react";
 import styles from "@/styles/components/common/DropDownCard.module.css";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function DropDownCard({ title, body }) {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.card} onClick={() => setExpanded(!expanded)}>
+    <motion.div
+      className={styles.container}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+    >
+      <motion.div
+        className={`${styles.card} ${expanded ? styles.expanded : ""}`}
+        onClick={() => setExpanded(!expanded)}
+        whileHover={{ scale: 1.01 }}
+        whileTap={{ scale: 0.99 }}
+      >
         <h4>{title}</h4>
-        <div className={styles.button}>
-          {/* Switch icon based on expanded state if desired */}
+        <motion.div
+          className={styles.button}
+          animate={{ rotate: expanded ? 180 : 0 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          whileHover={{
+            backgroundColor: "#0F4C75",
+            scale: 1.05,
+          }}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="30"
@@ -33,13 +52,51 @@ export default function DropDownCard({ title, body }) {
               </clipPath>
             </defs>
           </svg>
-        </div>
-      </div>
-      {expanded && (
-        <div className={styles.expandedCard}>
-          <p>{body}</p>
-        </div>
-      )}
-    </div>
+        </motion.div>
+      </motion.div>
+
+      <AnimatePresence>
+        {expanded && (
+          <motion.div
+            className={styles.expandedCard}
+            initial={{ opacity: 0, height: 0 }}
+            animate={{
+              opacity: 1,
+              height: "auto",
+              transition: {
+                height: {
+                  duration: 0.3,
+                },
+                opacity: {
+                  duration: 0.2,
+                  delay: 0.1,
+                },
+              },
+            }}
+            exit={{
+              opacity: 0,
+              height: 0,
+              transition: {
+                height: {
+                  duration: 0.3,
+                },
+                opacity: {
+                  duration: 0.2,
+                },
+              },
+            }}
+          >
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              transition={{ duration: 0.2, delay: 0.1 }}
+            >
+              {body}
+            </motion.p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
   );
 }

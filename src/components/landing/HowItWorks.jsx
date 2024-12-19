@@ -1,5 +1,8 @@
+"use client";
+
 import styles from "@/styles/components/landing/HowItWorks.module.css";
 import HowItWorksCard from "./HowItWorksCard";
+import { motion } from "framer-motion";
 
 // Icons as variables for convenience
 const tellUsIcon = (
@@ -49,37 +52,54 @@ const supportIcon = (
 export default function HowItWorks() {
   return (
     <section className={styles.container}>
-      <div className={styles.content}>
-        <div className={styles.text}>
+      <motion.div
+        className={styles.content}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+      >
+        <motion.div
+          className={styles.text}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+        >
           <h2>How It Works</h2>
           <p>
             We all need these as we age, and that&apos;s where Home Instead can
             help. Our high-quality, trained Care Professionals
           </p>
-        </div>
+        </motion.div>
+
         <div className={styles.cards}>
           <HowItWorksCard
             icon={tellUsIcon}
             title="Tell Us Your Needs"
             body="It is a long established fact that a reader will be distracted by the readable content of a page when looking at it."
+            delay={0.2}
           />
           <HowItWorksCard
             icon={matchedIcon}
             title="Get Matched with Qualified Caregivers"
             body="It is a long established fact that a reader will be distracted by the readable content of a page when looking at it."
+            delay={0.4}
           />
           <HowItWorksCard
             icon={scheduleIcon}
             title="Schedule & Manage Care Easily"
             body="It is a long established fact that a reader will be distracted by the readable content of a page when looking at it."
+            delay={0.6}
           />
           <HowItWorksCard
             icon={supportIcon}
             title="Ongoing Support & Adjustments"
             body="It is a long established fact that a reader will be distracted by the readable content of a page when looking at it."
+            delay={0.8}
           />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

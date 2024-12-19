@@ -1,5 +1,8 @@
-import Image from "next/image";
+"use client";
+
 import styles from "@/styles/components/landing/ForCareUsers.module.css";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 // SVG Icons for Caregivers
 const flexibleScheduleIcon = (
@@ -80,32 +83,66 @@ export default function ForCareGivers() {
     <section className={styles.container}>
       <div className={styles.content}>
         <div className={styles.text}>
-          <h2>For Caregivers</h2>
-          <p>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            For Caregivers
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
             BeHome nursing home care services encompass range of compassionate
             care options, including in-home
-          </p>
+          </motion.p>
           <div className={styles.cards}>
             {cards.map((card, idx) => (
-              <div key={idx} className={styles.card}>
+              <motion.div
+                key={idx}
+                className={styles.card}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 + idx * 0.1 }}
+                whileHover={{ scale: 1.02 }}
+              >
                 <div className={styles.icon}>{card.icon}</div>
                 <div>
                   <h3>{card.title}</h3>
                   <p>{card.body}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
-        <div className={styles.imageWrapper}>
+
+        <motion.div
+          className={styles.imageWrapper}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <Image
             src="/for-care-givers.jpg"
-            width={400}
+            width={500}
             height={400}
             alt="Care giver photo"
+            priority
           />
-          <div className={styles.blueBlock}></div>
-        </div>
+          <motion.div
+            className={styles.blueBlock}
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          />
+        </motion.div>
       </div>
     </section>
   );
