@@ -13,7 +13,7 @@ export default function ForCareUsers({
       <div className={`${styles.content} ${flipped ? styles.flipped : ""}`}>
         {/* Text section always first in markup to appear at top on mobile */}
         <div className={styles.textSection}>
-          <h1>{title}</h1>
+          <h2>{title}</h2>
           <p>{subtitle}</p>
         </div>
 

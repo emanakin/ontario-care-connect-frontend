@@ -6,7 +6,7 @@ export default function TypeOfServices() {
     <section className={styles.container}>
       <div className={styles.content}>
         <div className={styles.text}>
-          <h1>Type of Services</h1>
+          <h2>Type of Services</h2>
           <p>
             BeHome nursing home care services encompass a range of compassionate
             care options, including in-home personal care

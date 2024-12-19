@@ -1,5 +1,7 @@
 .overlayWrapper {
   position: relative;
+  z-index: 10;
+  padding: 0 2rem;
 }
 
 .container {

@@ -5,7 +5,7 @@ export default function HowItWorksCard(props) {
     <div className={styles.howItWorksCard}>
       <div className={styles.icon}>{props.icon}</div>
       <div>
-        <h3>{props.title}</h3>
+        <h4>{props.title}</h4>
         <p>{props.body}</p>
       </div>
     </div>

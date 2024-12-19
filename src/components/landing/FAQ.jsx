@@ -21,7 +21,7 @@ export default function FAQ() {
   return (
     <section className={styles.container}>
       <div className={styles.content}>
-        <h1>View All FAQs</h1>
+        <h2>View All FAQs</h2>
         <p>
           A handful of model sentence structures, to generate Lorem Ipsum which
           looks reasonable. The generated Lorem Ipsum is therefore always free

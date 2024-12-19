@@ -4,6 +4,17 @@ import styles from "@/styles/components/landing/HeroContainer.module.css";
 export default function HeroContainer() {
   return (
     <section className={styles.container}>
+      <Image
+        src="/hero-image.jpg"
+        alt="Nurse and Elder"
+        width={1920}
+        height={1080}
+        quality={100}
+        priority
+        className={styles.photo}
+        sizes="100vw"
+      />
+      <div className={styles.whiteOverlay}></div>
       <div className={styles.content}>
         <div className={styles.text}>
           <h1>
@@ -19,15 +30,6 @@ export default function HeroContainer() {
             <button>Find a Caregiver</button>
             <button>Receive Care</button>
           </div>
-        </div>
-        <div className={styles.image}>
-          <Image
-            src="/hero-image.jpg"
-            alt="Nurse and Elder"
-            width={600}
-            height={600}
-            className={styles.photo}
-          />
         </div>
       </div>
     </section>

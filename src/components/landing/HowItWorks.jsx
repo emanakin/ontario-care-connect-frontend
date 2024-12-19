@@ -51,7 +51,7 @@ export default function HowItWorks() {
     <section className={styles.container}>
       <div className={styles.content}>
         <div className={styles.text}>
-          <h1>How It Works</h1>
+          <h2>How It Works</h2>
           <p>
             We all need these as we age, and that&apos;s where Home Instead can
             help. Our high-quality, trained Care Professionals

@@ -1,35 +1,51 @@
 .container {
-  background: rgba(187, 225, 250, 0.1);
-  display: flex;
-  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  min-height: 500px;
+  max-height: 800px;
   overflow: hidden;
 }
 
 .content {
+  position: relative;
   max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0rem 2rem;
+  margin: 0 auto;
+}
+
+.whiteOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.95) 80%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: 2;
 }
 
 /* Text Section (Left Half) */
 .text {
+  position: relative;
+  max-height: 100%;
   width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 3rem 1rem 3rem 0rem;
+  max-width: 650px;
+  padding: 4rem;
+  z-index: 3;
 }
 
 .text h1 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
-  color: #1b262c;
+  font-size: clamp(2.5rem, 4vw, 4rem);
   line-height: 1.2;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
 }
 
 .text h1 span {
@@ -37,10 +53,9 @@
 }
 
 .text p {
-  font-size: clamp(1rem, 1.5vw, 1.125rem);
-  color: #4f5e63;
-  line-height: 1.5;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
   margin-bottom: 2rem;
+  max-width: 500px;
 }
 
 .buttons {
@@ -49,13 +64,13 @@
 }
 
 .buttons button {
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 2rem;
   font-size: clamp(0.875rem, 1vw, 1rem);
-  font-weight: 500;
+  font-weight: 600;
   border-radius: 0.5rem;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 /* Primary button style */
@@ -66,11 +81,12 @@
 
 .buttons button:first-child:hover {
   background: #0a314b;
+  transform: translateY(-2px);
 }
 
 /* Secondary button style */
 .buttons button:nth-child(2) {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.9);
   color: #0f4c75;
   border: 2px solid #0f4c75;
 }
@@ -78,31 +94,52 @@
 .buttons button:nth-child(2):hover {
   background: #0f4c75;
   color: #ffffff;
+  transform: translateY(-2px);
 }
 
-/* Image Section (Right Half) */
-.image {
-  width: 50%;
-  display: flex;
-  justify-content: flex-end;
-  overflow: hidden;
-  max-height: 35rem;
-}
-
-/* Ensuring image scales well */
+/* Image Section */
 .photo {
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top;
+  object-position: center 100%;
+  z-index: 1;
 }
 
 /* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .text {
+    width: 60%;
+    padding: 3rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .container {
+    height: auto;
+    min-height: 100vh;
+  }
+
   .content {
-    flex-direction: column;
+    position: absolute;
     align-items: flex-start;
-    padding: 2rem 1rem;
+    padding-top: 4rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+
+  .text {
+    position: relative;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    padding: 2rem 1.5rem;
   }
 
   .buttons {
@@ -111,25 +148,36 @@
 
   .buttons button {
     width: 100%;
-  }
-
-  .text,
-  .image {
-    width: 100%;
-    padding: 0;
-    height: auto;
-  }
-
-  .image {
-    padding-top: 1rem;
+    padding: 0.875rem 1.5rem;
   }
 
   .photo {
-    border-radius: 1rem;
-    height: 18rem;
+    position: absolute;
+    height: 100%;
+    min-height: 100vh;
+    object-position: 80% center;
+  }
+
+  .whiteOverlay {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.7) 30%,
+      rgba(255, 255, 255, 0.3) 60%,
+      transparent 100%
+    );
+  }
+}
+
+@media (max-width: 480px) {
+  .text {
+    padding: 1.5rem 1rem;
   }
 
   .text h1 {
-    font-size: clamp(1.75rem, 8vw, 2.5rem);
+    font-size: clamp(2rem, 6vw, 2.5rem);
   }
 }

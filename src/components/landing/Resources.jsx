@@ -35,7 +35,7 @@ export default function Resources() {
       <div className={styles.content}>
         <div className={styles.topRow}>
           <div>
-            <h1>Our Resource & Guide</h1>
+            <h2>Our Resource & Guide</h2>
             <p>
               BeHome nursing home care services encompass a range of
               compassionate care options, including in-home personal care

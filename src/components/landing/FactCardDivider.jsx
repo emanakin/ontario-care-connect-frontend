@@ -19,7 +19,7 @@ export default function FactCardDivider() {
               />
             </svg>
           </div>
-          <h3>Verified & Qualified Caregivers</h3>
+          <h4>Verified & Qualified Caregivers</h4>
         </div>
         <div className={styles.fact}>
           <div className={styles.icon}>
@@ -44,7 +44,7 @@ export default function FactCardDivider() {
               />
             </svg>
           </div>
-          <h3>Customized Care Plans</h3>
+          <h4>Customized Care Plans</h4>
         </div>
         <div className={styles.fact}>
           <div className={styles.icon}>
@@ -61,7 +61,7 @@ export default function FactCardDivider() {
               />
             </svg>
           </div>
-          <h3>Easy Scheduling</h3>
+          <h4>Easy Scheduling</h4>
         </div>
         <div className={styles.fact}>
           <div className={styles.icon}>
@@ -78,7 +78,7 @@ export default function FactCardDivider() {
               />
             </svg>
           </div>
-          <h3>Secure & Reliable Platform</h3>
+          <h4>Secure & Reliable Platform</h4>
         </div>
       </div>
     </div>

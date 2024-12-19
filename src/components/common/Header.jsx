@@ -1,17 +1,48 @@
 "use client";
 
+import { useState, useEffect } from "react";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import Image from "next/image";
 import styles from "@/styles/components/common/Header.module.css";
-import { useState } from "react";
 
 export default function Header() {
   const [selectedLink, setSelectedLink] = useState("Home");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const { scrollY } = useScroll();
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    // Check if we're past the hero section (adjust 500 to match your hero height)
+    const isScrolledPastHero = latest > 500;
+
+    // Determine scroll direction
+    const isScrollingDown = latest > lastScrollY;
+
+    // Update header visibility and background
+    setIsScrolled(latest > 50);
+    setIsVisible(!isScrolledPastHero || !isScrollingDown || latest < 50);
+
+    setLastScrollY(latest);
+  });
 
   const links = ["Home", "Services", "About Us", "Resources", "Contact Us"];
 
   return (
-    <header className={styles.container}>
+    <motion.header
+      className={`${styles.container} ${isScrolled ? styles.scrolled : ""} ${
+        !isVisible ? styles.hidden : ""
+      }`}
+      initial={{ backgroundColor: "rgba(255, 255, 255, 0)" }}
+      animate={{
+        backgroundColor: isScrolled
+          ? "rgba(255, 255, 255, 0.98)"
+          : "rgba(255, 255, 255, 0)",
+        boxShadow: isScrolled ? "0 1px 4px rgba(0, 0, 0, 0.1)" : "none",
+      }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+    >
       <div className={styles.content}>
         {/* Logo Section */}
         <div className={styles.logo}>
@@ -81,6 +112,6 @@ export default function Header() {
           </a>
         ))}
       </div>
-    </header>
+    </motion.header>
   );
 }

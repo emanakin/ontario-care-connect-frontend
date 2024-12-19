@@ -90,7 +90,7 @@ export default function ForCareReceivers() {
     <section className={styles.container}>
       <div className={`${styles.content} ${styles.flipped}`}>
         <div className={styles.text}>
-          <h1>For Care Receivers</h1>
+          <h2>For Care Receivers</h2>
           <p>
             BeHome nursing home care services encompass range of compassionate
             care options, including in-home
