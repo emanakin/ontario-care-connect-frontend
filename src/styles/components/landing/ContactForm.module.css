@@ -17,7 +17,7 @@
 
 /* Textarea styling based on your specs */
 .message {
-  width: 100%;
+  width: 90%;
   min-height: 200px;
   padding: 1rem;
   border-radius: 0.75rem;
@@ -82,7 +82,10 @@
     align-items: stretch;
   }
 
-  .emailInput,
+  .emailInput {
+    width: 90%;
+  }
+
   .sendButton {
     width: 100%;
   }

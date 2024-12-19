@@ -99,7 +99,19 @@ export default function ServiceCard({
           },
         }}
       >
-        <Image src={photo} alt={`${title} service`} width={600} height={400} />
+        <Image
+          src={photo}
+          alt={`${title} service`}
+          width={600}
+          height={400}
+          quality={100}
+          priority
+          style={{
+            objectFit: "cover",
+            width: "100%",
+            height: "100%",
+          }}
+        />
       </motion.div>
     </motion.div>
   );

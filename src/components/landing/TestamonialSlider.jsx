@@ -116,6 +116,13 @@ export default function TestamonialSlider() {
               alt={current.name}
               width={300}
               height={300}
+              quality={100}
+              priority
+              style={{
+                objectFit: "cover",
+                width: "100%",
+                height: "100%",
+              }}
             />
           </motion.div>
 

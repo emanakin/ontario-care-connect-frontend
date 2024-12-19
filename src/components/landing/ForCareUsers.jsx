@@ -20,7 +20,19 @@ export default function ForCareUsers({
         {/* Image section in the middle on desktop */}
         <div className={styles.image}>
           <div className={styles.imageWrapper}>
-            <Image src={image} width={400} height={400} alt="Care related" />
+            <Image
+              src={image}
+              width={400}
+              height={400}
+              alt="Care related"
+              quality={100}
+              priority
+              style={{
+                objectFit: "cover",
+                width: "100%",
+                height: "100%",
+              }}
+            />
           </div>
           <div className={styles.blueBlock}></div>
         </div>
