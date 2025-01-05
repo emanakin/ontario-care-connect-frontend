@@ -1,0 +1,49 @@
+{
+  "hero": {
+    "title": {
+      "main": "Contact",
+      "sub": "Us"
+    },
+    "subtitle": "Have questions or ready to start? We're here to help you find the right care solution.",
+    "imageAlt": "Customer service representative ready to help",
+    "image": "/images/contact/hero.jpeg"
+  },
+  "contactInfo": {
+    "phone": "+1 (555) 123-4567",
+    "email": "care@elderlyease.com",
+    "address": "123 Care Street, St. Catharines, ON L2T 1A1",
+    "hours": {
+      "weekdays": "8:00 AM - 8:00 PM",
+      "weekends": "9:00 AM - 5:00 PM"
+    }
+  },
+  "form": {
+    "title": "Send us a message",
+    "fields": [
+      {
+        "name": "fullName",
+        "label": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "label": "Phone Number",
+        "type": "tel",
+        "required": false
+      },
+      {
+        "name": "message",
+        "label": "Your Message",
+        "type": "textarea",
+        "required": true
+      }
+    ]
+  }
+}

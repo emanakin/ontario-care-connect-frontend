@@ -1,0 +1,196 @@
+{
+  "hero": {
+    "title": {
+      "prefix": "Connect with",
+      "main": "Quality In-Home",
+      "suffix": "Care Solutions"
+    },
+    "subtitle": "Empowering families in the Niagara region to find tailored, reliable care solutions for their loved ones, all from the comfort of home.",
+    "buttons": {
+      "primary": "Become a CareGiver",
+      "secondary": "Build a Care Plan"
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "steps": [
+      {
+        "title": "Tell Us Your Needs",
+        "description": "Whether you're a family seeking compassionate care or a caregiver looking to offer your expertise, share your unique requirements to get started.",
+        "icon": "/icons/tell-us.svg"
+      },
+      {
+        "title": "Get Matched with Qualified Caregivers",
+        "description": "We carefully match families with vetted and qualified caregivers who meet their specific needs, ensuring peace of mind for everyone involved.",
+        "icon": "/icons/matched.svg"
+      },
+      {
+        "title": "Schedule and Manage Care with Ease",
+        "description": "Use our platform to seamlessly book appointments, manage schedules, and stay on top of care plans, giving you confidence and convenience.",
+        "icon": "/icons/schedule.svg"
+      },
+      {
+        "title": "Ongoing Support and Adjustments",
+        "description": "Life changes, and so do care needs. We provide continuous support to adapt plans and ensure the best experience for both families and caregivers.",
+        "icon": "/icons/support.svg"
+      }
+    ]
+  },
+  "services": {
+    "title": "Types of Services",
+    "description": "Find out more about the levels of care we provide. Our diverse team of caregivers, ranging from undergraduate students to specialized professionals, ensures the right expertise for every care need.",
+    "cards": [
+      {
+        "title": "Home Support",
+        "link": "/services/home-support",
+        "description": "Designed for general assistance with daily tasks, home support includes help with housekeeping, meal preparation, and errands. Perfect for those seeking a lighter level of care.",
+        "image": "/images/landing/service-image-1.jpg"
+      },
+      {
+        "title": "Personal Care",
+        "link": "/services/personal-care",
+        "description": "Focused on essential personal needs such as bathing, grooming, and mobility support. Provided by experienced Personal Support Worker (PSW) college graduates.",
+        "image": "/images/landing/service-image-2.jpg"
+      },
+      {
+        "title": "Complex Care",
+        "link": "/services/complex-care",
+        "description": "For individuals requiring specialized medical care, this level is handled by professionals with advanced credentials and expertise in healthcare.",
+        "image": "/images/landing/service-image-3.png"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What People Say",
+    "description": "Hear from families and caregivers about their experiences with our platform and the impact it has made in their lives.",
+    "items": [
+      {
+        "photo": "/images/landing/testimonial1.png",
+        "from": "From Care Receivers",
+        "name": "Kamala Shane",
+        "rating": 5,
+        "body": "The support my family received was beyond what we expected. From the initial consultation to matching us with a caregiver, everything was seamless. Our caregiver went above and beyond to ensure my mother felt comfortable and cared for. I can’t recommend this platform enough—it’s truly a lifesaver for families seeking reliable and compassionate care."
+      },
+      {
+        "photo": "/images/landing/testimonial2.png",
+        "from": "From Care Givers",
+        "name": "Jane Doe",
+        "rating": 4,
+        "body": "As a caregiver, I’ve worked with several platforms, but this one stands out. The process of finding families to work with was straightforward, and the platform always ensured clear communication and support. I feel valued as a professional and appreciate how the system prioritizes the needs of both families and caregivers."
+      },
+      {
+        "photo": "/images/landing/testimonial3.png",
+        "from": "From Care Receivers",
+        "name": "Jane Smith & Travis Kelcy",
+        "rating": 5,
+        "body": "This service has been a game-changer for our family. My brother and I were struggling to find care for our father after his surgery, and this platform made the process effortless. Our caregiver was incredibly skilled and personable, providing not just assistance but also companionship. It’s the best decision we made during a challenging time."
+      }
+    ]
+  },
+  "careGivers": {
+    "title": "Empowering Caregivers",
+    "description": "Join a platform that values your skills and supports your journey as a caregiver. From flexible schedules to comprehensive training, we ensure you have the tools to succeed and grow in your career.",
+    "cards": [
+      {
+        "icon": "/icons/flexible-schedule.svg",
+        "title": "Flexible Schedule",
+        "body": "Enjoy the freedom to set your own hours and work around your personal commitments. Our platform allows you to choose opportunities that fit your availability, giving you the perfect work-life balance."
+      },
+      {
+        "icon": "/icons/earn-rates.svg",
+        "title": "Earn Competitive Rates",
+        "body": "We believe in rewarding caregivers for their dedication and hard work. With competitive pay rates and the opportunity to grow your income, you can feel confident about your financial stability while doing what you love."
+      },
+      {
+        "icon": "/icons/supportive-community.svg",
+        "title": "Supportive Community",
+        "body": "Be part of a vibrant community of caregivers who share your passion for making a difference. Access peer support, engage in discussions, and build meaningful connections that enhance your experience."
+      },
+      {
+        "icon": "/icons/training-resources.svg",
+        "title": "Training & Resources",
+        "body": "Grow your skills and advance your career with access to expert training and educational resources. Our platform offers tools to help you deliver exceptional care and achieve your professional goals."
+      }
+    ]
+  },
+  "careReceivers": {
+    "title": "Why Choose Us",
+    "description": "We prioritize quality and safety to ensure a seamless experience for families and caregivers. Discover the key features that set us apart and make finding care easier than ever.",
+    "cards": [
+      {
+        "icon": "/icons/handpicked.svg",
+        "title": "Handpicked Caregivers",
+        "body": "Our caregivers are carefully selected based on their experience, expertise, and compassion, ensuring your loved ones receive the highest level of care."
+      },
+      {
+        "icon": "/icons/verified-caregivers.svg",
+        "title": "Verified Caregivers",
+        "body": "All caregivers on our platform go through rigorous background checks and credential verifications, giving you peace of mind and trust in the care provided."
+      },
+      {
+        "icon": "/icons/personalized-matching.svg",
+        "title": "Personalized Matching",
+        "body": "We use advanced algorithms to match families with caregivers who best meet their specific needs, preferences, and schedules for a perfect fit."
+      },
+      {
+        "icon": "/icons/safe-secure.svg",
+        "title": "Safe & Secure Payments",
+        "body": "With secure and reliable payment processing, you can manage transactions confidently and focus on what truly matters—your loved one's care."
+      }
+    ]
+  },
+  "faq": {
+    "title": "View All FAQs",
+    "description": "Have questions? We've got answers. Explore our comprehensive FAQ section to find quick solutions and stay informed about our platform and services.",
+    "questions": [
+      {
+        "title": "How do I find the right caregiver?",
+        "body": "Our platform makes it easy to find the perfect caregiver. Simply tell us your needs and preferences, and we’ll match you with experienced caregivers who meet your specific requirements. You can review their profiles and choose the one that best fits your situation."
+      },
+      {
+        "title": "What qualifications do caregivers have?",
+        "body": "All caregivers on our platform undergo a thorough vetting process, including background checks and verification of credentials. From personal support workers (PSWs) to professionals with advanced medical training, we ensure every caregiver meets our high standards of care."
+      },
+      {
+        "title": "How do I pay for services?",
+        "body": "Payments are securely processed through our platform, ensuring convenience and safety. Once you select a caregiver and agree on a schedule, you can manage payments seamlessly with just a few clicks, providing peace of mind for both families and caregivers."
+      }
+    ]
+  },
+  "articles": {
+    "title": "Latest Articles & Insights",
+    "description": "Stay informed with our curated collection of articles and resources. Explore expert tips, industry trends, and helpful guides tailored to caregivers and families seeking quality care solutions.",
+    "cards": [
+      {
+        "image": "/images/landing/article1.jpg",
+        "title": "5 Tips for Choosing the Right Caregiver",
+        "body": "Selecting a caregiver can feel overwhelming, but with these five tips, you can make an informed decision that ensures the best care for your loved ones.",
+        "link": "#"
+      },
+      {
+        "image": "/images/landing/article2.png",
+        "title": "The Importance of Personalized Care Plans",
+        "body": "Discover how tailored care plans can improve the quality of life for care recipients by addressing their unique needs and preferences.",
+        "link": "#"
+      },
+      {
+        "image": "/images/landing/article3.png",
+        "title": "How to Ensure Safety in Home Care Services",
+        "body": "Learn the essential steps to verify caregiver credentials, implement safety measures, and create a secure environment for home care.",
+        "link": "#"
+      },
+      {
+        "image": "/images/landing/article4.jpg",
+        "title": "Supporting Family Caregivers: A Guide",
+        "body": "Family caregivers play a critical role in providing care, but they also need support. Explore strategies to balance caregiving responsibilities and self-care.",
+        "link": "#"
+      },
+      {
+        "image": "/images/landing/article5.jpg",
+        "title": "Top Trends in In-Home Care for 2025",
+        "body": "Stay ahead of the curve with insights into the latest innovations and trends shaping the in-home care industry this year.",
+        "link": "#"
+      }
+    ]
+  }
+}

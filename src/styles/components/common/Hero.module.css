@@ -1,0 +1,143 @@
+.container {
+  padding: 5rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content {
+  background-color: #4d8ff21f;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 1;
+}
+
+.text h1 {
+  color: #003588;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.text h1 span {
+  color: #266afb;
+}
+
+.text p {
+  font-size: 1.125rem;
+  color: #4f5e63;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.imageWrapper {
+  flex: 1;
+  position: relative;
+  height: 400px;
+  min-width: 45%;
+}
+
+.imageContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: path(
+    "M136.881 0H629.94C641.009 0 649.973 8.99069 649.94 20.0596L648.867 380.06C648.834 391.082 639.889 400 628.867 400H20C8.9543 400 0 391.046 0 380V138.209C0 127.163 8.95433 118.209 20 118.209H96.8807C107.926 118.209 116.881 109.255 116.881 98.209V20C116.881 8.95431 125.835 0 136.881 0Z"
+  );
+}
+
+.image {
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+.cutoutOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 15%;
+  background-color: #4d8ff21f;
+}
+
+.searchContainer {
+  display: flex;
+  gap: 1rem;
+  max-width: 500px;
+  margin-top: 1rem;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+  border-color: #266afb;
+}
+
+.searchButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #266afb;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.searchButton:hover {
+  background-color: #1a4fc7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .content {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .text h1 {
+    font-size: 2rem;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    height: 300px;
+  }
+
+  .imageContainer {
+    clip-path: none;
+  }
+
+  .cutoutOverlay {
+    display: none;
+  }
+
+  .searchContainer {
+    flex-direction: column;
+  }
+}

@@ -3,9 +3,25 @@
 import { useState, useEffect } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 import styles from "@/styles/components/common/Header.module.css";
 
+// 1. Move links out of the component to avoid re-creation every render
+const LINKS = ["Home", "Services", "About", "Resources", "Contact", "FAQ"];
+
+// 2. Helper function for nicely formatting a pathname (e.g., "/contact-us" -> "Contact Us")
+function formatPathToLink(pathname) {
+  if (pathname === "/") return "Home";
+  return pathname
+    .slice(1)
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
 export default function Header() {
+  const pathname = usePathname();
   const [selectedLink, setSelectedLink] = useState("Home");
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -14,20 +30,22 @@ export default function Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    // Check if we're past the hero section (adjust 500 to match your hero height)
     const isScrolledPastHero = latest > 500;
-
-    // Determine scroll direction
     const isScrollingDown = latest > lastScrollY;
-
-    // Update header visibility and background
     setIsScrolled(latest > 50);
     setIsVisible(!isScrolledPastHero || !isScrollingDown || latest < 50);
-
     setLastScrollY(latest);
   });
 
-  const links = ["Home", "Services", "About Us", "Resources", "Contact Us"];
+  // 3. Use the helper and, if guaranteed valid, remove the LINKS.includes(...) check
+  useEffect(() => {
+    const basePath = pathname.split("/")[1] || ""; // e.g., "/services/x" -> ["", "services", "x"]
+    const linkLabel = basePath
+      ? basePath.charAt(0).toUpperCase() + basePath.slice(1)
+      : "Home";
+
+    setSelectedLink(linkLabel);
+  }, [pathname]);
 
   return (
     <motion.header
@@ -63,17 +81,21 @@ export default function Header() {
 
         {/* Navigation Links (Desktop) */}
         <nav className={styles.links}>
-          {links.map((link) => (
+          {LINKS.map((link) => (
             <div key={link} className={styles.linkWrapper}>
-              <a
-                href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
+              <Link
+                href={
+                  link === "Home"
+                    ? "/"
+                    : `/${link.toLowerCase().replace(/\s+/g, "-")}`
+                }
                 className={
                   selectedLink === link ? styles.selectedLink : styles.link
                 }
                 onClick={() => setSelectedLink(link)}
               >
                 {link}
-              </a>
+              </Link>
               {selectedLink === link && (
                 <div className={styles.underline}></div>
               )}
@@ -98,7 +120,7 @@ export default function Header() {
         >
           &times;
         </button>
-        {links.map((link) => (
+        {LINKS.map((link) => (
           <a
             key={link}
             href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}

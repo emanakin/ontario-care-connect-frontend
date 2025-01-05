@@ -1,0 +1,146 @@
+{
+  "hero": {
+    "title": {
+      "main": "Support Your In Home",
+      "sub": "Needs"
+    },
+    "subtitle": "From basic home help to complex medical care, we offer a full range of services tailored to your needs.",
+    "photo": "/images/services/hero.png"
+  },
+  "serviceGrid": {
+    "typesOfService": ["Home Support", "Personal Care", "Complex Care"],
+    "descriptions": {
+      "Home Support": "Daily assistance with household tasks and activities to maintain a comfortable living environment",
+      "Personal Care": "Compassionate support with personal hygiene and daily living activities",
+      "Complex Care": "Highly skilled tasks performed by registered health professionals (Registered nurses or registered practical nurses)"
+    },
+    "services": {
+      "Home Support": [
+        {
+          "title": "Light Housekeeping & Laundry",
+          "icon": "/icons/services/home-support/washing-clothes.svg"
+        },
+        {
+          "title": "Meal Preparation & Planning",
+          "icon": "/icons/services/home-support/list-apple.svg"
+        },
+        {
+          "title": "Companionship & Community outings",
+          "icon": "/icons/services/home-support/companion.svg"
+        },
+        {
+          "title": "Light yard work",
+          "icon": "/icons/services/home-support/plant-shovel.svg"
+        },
+        {
+          "title": "Grocery Shopping",
+          "icon": "/icons/services/home-support/shopping-cart.svg"
+        },
+        {
+          "title": "Errands",
+          "icon": "/icons/services/home-support/errands.svg"
+        },
+        {
+          "title": "Accompaniment to appointments",
+          "icon": "/icons/services/home-support/accompaniment.svg"
+        },
+        {
+          "title": "Pet Care",
+          "icon": "/icons/services/home-support/walking-pet.svg"
+        },
+        {
+          "title": "Incidental Transportation",
+          "icon": "/icons/services/home-support/person-car.svg"
+        },
+        {
+          "title": "Home Safety checks",
+          "icon": "/icons/services/home-support/safety-check.svg"
+        },
+        {
+          "title": "Sorting mail, cupboard cleaning, fridge cleaning",
+          "icon": "/icons/services/home-support/cleaning-window.svg"
+        },
+        {
+          "title": "Coordination of home repairs & assistive devices installations",
+          "icon": "/icons/services/home-support/home-repairs.svg"
+        },
+        {
+          "title": "Referrals to community agencies if required",
+          "icon": "/icons/services/home-support/handshake.svg"
+        }
+      ],
+      "Personal Care": [
+        {
+          "title": "Bathing",
+          "icon": "/icons/services/personal-care/bath.svg"
+        },
+        {
+          "title": "Grooming",
+          "icon": "/icons/services/personal-care/grooming.svg"
+        },
+        {
+          "title": "Dressing",
+          "icon": "/icons/services/personal-care/dress.svg"
+        },
+        {
+          "title": "Mobility Assistance",
+          "icon": "/icons/services/personal-care/mobility.svg"
+        },
+        {
+          "title": "Toileting",
+          "icon": "/icons/services/personal-care/toilete.svg"
+        },
+        {
+          "title": "Medication Reminders",
+          "icon": "/icons/services/personal-care/medication-reminder.svg"
+        },
+        {
+          "title": "Continence assistance",
+          "icon": "/icons/services/personal-care/continence.svg"
+        },
+        {
+          "title": "Alzheimer & Dementia support",
+          "icon": "/icons/services/personal-care/alzheimer.svg"
+        },
+        {
+          "title": "Respite Care",
+          "icon": "/icons/services/personal-care/respite.svg"
+        },
+        {
+          "title": "Overnight Care",
+          "icon": "/icons/services/personal-care/overnight.svg"
+        }
+      ],
+      "Complex Care": [
+        {
+          "title": "Wound Care",
+          "icon": "/icons/services/complex-care/bandaid.svg"
+        },
+        {
+          "title": "Catheterization",
+          "icon": "/icons/services/complex-care/cather.svg"
+        },
+        {
+          "title": "Foot Care",
+          "icon": "/icons/services/complex-care/foot-care.svg"
+        },
+        {
+          "title": "Medication Administration",
+          "icon": "/icons/services/complex-care/medication.svg"
+        },
+        {
+          "title": "Ostomy Care",
+          "icon": "/icons/services/complex-care/ostomy.svg"
+        },
+        {
+          "title": "Palliative Care",
+          "icon": "/icons/services/complex-care/palliative.svg"
+        },
+        {
+          "title": "Vital Signs Monitoring",
+          "icon": "/icons/services/complex-care/vitals.svg"
+        }
+      ]
+    }
+  }
+}

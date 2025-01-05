@@ -4,56 +4,26 @@ import { useState } from "react";
 import Image from "next/image";
 import styles from "@/styles/components/landing/Testamonials.module.css";
 import { motion, AnimatePresence } from "framer-motion";
+import { testimonials } from "@/content/pages/home.json";
 
 export default function TestamonialSlider() {
-  const testimonials = [
-    {
-      photo: "/testimonial1.png",
-      from: "From Care Receivers",
-      name: "Kamala Shane",
-      rating: 5,
-      body: `Randomised words which don’t look even slightly believable. 
-      if you are going to use a passage of lorem ipsum, you need to be sure 
-      there isn’t anything embarrassing hidden in the middle of text. 
-      all the lorem ipsum generators on the internet tend to repeat predefined chunks as 
-      necessary, making this the first true generator on the internet. 
-      It uses a dictionary of over 200 latin words, combined with a handful`,
-    },
-    {
-      photo: "/testimonial2.png",
-      from: "From Care Givers",
-      name: "Jane Doe",
-      rating: 4,
-      body: `It is a long established fact that a reader will be distracted by the 
-      readable content of a page when looking at its layout. The point of using 
-      Lorem Ipsum is that it has a more-or-less normal distribution of letters, 
-      as opposed to using 'Content here, content here', making it look like readable English.`,
-    },
-    {
-      photo: "/testimonial3.png",
-      from: "From Care Receivers",
-      name: "Jane Smith & Travis Kelcy",
-      rating: 5,
-      body: `Contrary to popular belief, Lorem Ipsum is not simply random text. 
-      It has roots in a piece of classical Latin literature from 45 BC, 
-      making it over 2000 years old.`,
-    },
-  ];
-
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1); // 1 for next, -1 for prev
 
   const nextTestimonial = () => {
     setDirection(1);
-    setIndex((prev) => (prev + 1) % testimonials.length);
+    setIndex((prev) => (prev + 1) % testimonials.items.length);
   };
 
   const prevTestimonial = () => {
     setDirection(-1);
-    setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setIndex(
+      (prev) =>
+        (prev - 1 + testimonials.items.length) % testimonials.items.length
+    );
   };
 
-  const current = testimonials[index];
+  const current = testimonials.items[index];
 
   // Create an array of stars based on rating
   const stars = Array.from({ length: current.rating }, (_, i) => (

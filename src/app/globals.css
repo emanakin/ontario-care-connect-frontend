@@ -17,6 +17,11 @@ body {
   color: var(--text-body);
   font-family: "Poppins", Arial, sans-serif;
   line-height: 1.6;
+  height: 100vh;
+}
+
+.mainContent {
+  min-height: 95%;
 }
 
 /* Reset Margins for Headings */

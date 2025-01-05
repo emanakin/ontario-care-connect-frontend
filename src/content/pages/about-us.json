@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "title": {
+      "main": "About",
+      "sub": "ElderlyEase"
+    },
+    "subtitle": "Dedicated to providing exceptional home care services with compassion and professionalism since 2020.",
+    "imageAlt": "Our care team at work",
+    "image": "/images/about-us/hero.jpeg"
+  },
+  "mission": {
+    "title": "Our Mission",
+    "description": "To enhance the quality of life for seniors and their families through personalized, professional care services.",
+    "values": [
+      {
+        "title": "Compassion",
+        "description": "We approach every client with understanding and empathy"
+      },
+      {
+        "title": "Excellence",
+        "description": "We maintain the highest standards in care and service delivery"
+      },
+      {
+        "title": "Reliability",
+        "description": "We are committed to being there when you need us most"
+      }
+    ]
+  },
+  "team": {
+    "title": "Our Team",
+    "description": "Meet the dedicated professionals who make our mission possible",
+    "members": []
+  }
+}

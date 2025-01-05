@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "@/styles/components/landing/HowItWorks.module.css";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function HowItWorksCard({ icon, title, body, delay }) {
@@ -36,7 +37,7 @@ export default function HowItWorksCard({ icon, title, body, delay }) {
           backgroundColor: "rgba(50, 130, 184, 0.15)",
         }}
       >
-        {icon}
+        <Image src={icon} alt={title} width={42} height={42} />
       </motion.div>
 
       <div>

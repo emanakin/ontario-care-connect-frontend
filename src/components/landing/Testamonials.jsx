@@ -1,17 +1,14 @@
 import styles from "@/styles/components/landing/Testamonials.module.css";
 import TestamonialSlider from "@/components/landing/TestamonialSlider";
+import { testimonials } from "@/content/pages/home.json";
 
 export default function Testamonials() {
   return (
     <section className={styles.container}>
       <div className={styles.content}>
         <div className={styles.text}>
-          <h1>Trusted By By 300+ Families</h1>
-          <p>
-            A handful of model sentence structures, to generate Lorem Ipsum
-            which looks reasonable. The generated Lorem Ipsum is therefore
-            always free from repetition,
-          </p>
+          <h2>{testimonials.title}</h2>
+          <p>{testimonials.description}</p>
         </div>
         <div className={styles.slider}>
           <TestamonialSlider />

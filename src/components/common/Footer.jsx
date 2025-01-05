@@ -18,8 +18,8 @@ export default function Footer() {
               <Image
                 src="/logo.png"
                 alt="ElderlyEase Logo"
-                width={200}
-                height={30}
+                width={827}
+                height={188}
                 priority
               />
             </motion.div>

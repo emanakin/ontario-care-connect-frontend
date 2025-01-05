@@ -1,0 +1,28 @@
+{
+  "hero": {
+    "title": {
+      "main": "Helpful",
+      "sub": "Resources"
+    },
+    "subtitle": "Access guides, articles, and tools to help you make informed decisions about care for your loved ones.",
+    "imageAlt": "Collection of care resources and guides",
+    "image": "/images/resources/hero.jpeg"
+  },
+  "categories": [
+    {
+      "title": "Care Guides",
+      "description": "Comprehensive guides on various aspects of elderly care",
+      "resources": []
+    },
+    {
+      "title": "Articles",
+      "description": "Latest insights and tips for caregivers and families",
+      "resources": []
+    },
+    {
+      "title": "Tools",
+      "description": "Useful tools and calculators for care planning",
+      "resources": []
+    }
+  ]
+}

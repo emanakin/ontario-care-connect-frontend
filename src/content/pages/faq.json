@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "title": {
+      "main": "Frequently Asked",
+      "sub": "Questions"
+    },
+    "subtitle": "Find quick answers to common queries. If you can't find what you're looking for, feel free to contact us",
+    "imageAlt": "People discussing care options",
+    "image": "/images/faq/hero.jpg"
+  },
+  "categories": [
+    {
+      "title": "General Questions",
+      "questions": [
+        {
+          "question": "What services do you offer?",
+          "answer": "We provide a range of home care services including personal care, companionship, housekeeping, and specialized medical care."
+        },
+        {
+          "question": "What areas do you serve?",
+          "answer": "We currently serve the entire Niagara region and surrounding areas."
+        }
+      ]
+    },
+    {
+      "title": "Care Services",
+      "questions": [
+        {
+          "question": "How do you match caregivers with clients?",
+          "answer": "We carefully consider factors such as care needs, personality, schedule, and specific requirements to ensure the best possible match."
+        }
+      ]
+    }
+  ]
+}

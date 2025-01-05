@@ -4,23 +4,9 @@ import styles from "@/styles/components/landing/FAQ.module.css";
 import ContactForm from "./ContactForm";
 import DropDownCard from "@/components/common/DropDownCard";
 import { motion } from "framer-motion";
+import { faq } from "@/content/pages/home.json";
 
 export default function FAQ() {
-  const faqs = [
-    {
-      title: "How do I find the right caregiver?",
-      body: "If you are going to use a passage of lorem ipsum...",
-    },
-    {
-      title: "What qualifications do caregivers have?",
-      body: "Lorem ipsum generators on the internet tend...",
-    },
-    {
-      title: "How do I pay for services?",
-      body: "There isn't anything embarrassing hidden in the text...",
-    },
-  ];
-
   return (
     <section className={styles.container}>
       <motion.div
@@ -36,7 +22,7 @@ export default function FAQ() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          View All FAQs
+          {faq.title}
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -44,9 +30,7 @@ export default function FAQ() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          A handful of model sentence structures, to generate Lorem Ipsum which
-          looks reasonable. The generated Lorem Ipsum is therefore always free
-          from repetition,
+          {faq.description}
         </motion.p>
         <div className={styles.row}>
           <motion.div
@@ -56,7 +40,7 @@ export default function FAQ() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            {faqs.map((faq, idx) => (
+            {faq.questions.map((faq, idx) => (
               <DropDownCard
                 key={idx}
                 title={faq.title}

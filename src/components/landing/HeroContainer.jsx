@@ -1,12 +1,13 @@
 import Image from "next/image";
 import styles from "@/styles/components/landing/HeroContainer.module.css";
+import { hero } from "@/content/pages/home.json";
 
 export default function HeroContainer() {
   return (
     <section className={styles.container}>
       <Image
-        src="/hero-image.jpg"
-        alt="Nurse and Elder"
+        src="/images/landing/hero-image.jpg"
+        alt="Caregiver assisting a senior in-home"
         width={1920}
         height={1080}
         quality={100}
@@ -18,17 +19,14 @@ export default function HeroContainer() {
       <div className={styles.content}>
         <div className={styles.text}>
           <h1>
-            <span>Connect </span>
-            with Quality In-Home
-            <span> Care Solutions</span>
+            <span>{hero.title.prefix}</span>
+            {" " + hero.title.main + " "}
+            <span>{hero.title.suffix}</span>
           </h1>
-          <p>
-            Emphasizing ease of use, trustworthiness, and tailored matches for
-            care receivers and career growth for caregivers.
-          </p>
+          <p>{hero.subtitle}</p>
           <div className={styles.buttons}>
-            <button>Find a Caregiver</button>
-            <button>Receive Care</button>
+            <button>{hero.buttons.primary}</button>
+            <button>{hero.buttons.secondary}</button>
           </div>
         </div>
       </div>
