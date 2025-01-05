@@ -25,8 +25,8 @@ export default function ArticleCard({
         <Image
           src={image}
           alt={"Article Cover"}
-          layout="fill"
-          objectFit="cover"
+          fill={true}
+          style={{ objectFit: "cover" }}
         />
       </div>
       <div className={styles.textContent}>

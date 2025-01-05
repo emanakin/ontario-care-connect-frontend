@@ -2,7 +2,8 @@ import FAQ from "@/components/common/FAQ";
 import Hero from "@/components/common/Hero";
 import ContactSection from "@/components/contact/ContactSection";
 import Map from "@/components/contact/Map";
-import { hero } from "@/content/pages/contact-us.json";
+import contactContent from "@/content/pages/contact-us.json";
+const { hero, faq, contactSection } = contactContent;
 
 export const metadata = {
   title: "Contact Us | ElderlyEase",
@@ -22,9 +23,9 @@ export default function ContactPage() {
         image={hero.image}
         imageAlt={hero.imageAlt}
       />
-      <ContactSection />
+      <ContactSection data={contactSection} />
       <Map />
-      <FAQ />
+      <FAQ data={faq} />
     </>
   );
 }

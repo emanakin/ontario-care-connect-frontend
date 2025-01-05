@@ -1,24 +1,25 @@
-import { hero } from "@/content/pages/services";
+import servicesContent from "@/content/pages/services";
+const { hero, serviceGrid, faq } = servicesContent;
 import Hero from "@/components/common/Hero";
 import ServiceGrid from "@/components/services/ServiceGrid";
 import ServiceSchema from "@/components/services/ServiceSchema";
-import { serviceGrid } from "@/content/pages/services";
 import { redirect } from "next/navigation";
 import FAQ from "@/components/common/FAQ";
 
 // Validate service type and generate metadata
 export async function generateMetadata({ params }) {
   const { type } = await params;
-  const validTypes = serviceGrid.typesOfService.map((t) =>
-    t.toLowerCase().replace(" ", "-")
+
+  const validTypes = (serviceGrid?.typesOfService || []).map((t) =>
+    t.toLowerCase().replace(/\s+/g, "-")
   );
 
   if (!validTypes.includes(type)) {
     redirect("/services/home-support");
   }
 
-  const title = serviceGrid.typesOfService.find(
-    (t) => t.toLowerCase().replace(" ", "-") === type
+  const title = (serviceGrid?.typesOfService || []).find(
+    (t) => t.toLowerCase().replace(/\s+/g, "-") === type
   );
 
   return {
@@ -41,30 +42,29 @@ export async function generateStaticParams() {
 
 export default async function ServicePage({ params }) {
   const { type } = await params;
-
-  const serviceType = serviceGrid.typesOfService.find(
-    (t) => t.toLowerCase().replace(" ", "-") === type
+  const serviceType = (serviceGrid?.typesOfService || []).find(
+    (t) => t.toLowerCase().replace(/\s+/g, "-") === type
   );
 
   return (
     <>
       <Hero
         title={{
-          main: hero.title.main,
-          sub: hero.title.sub,
+          main: hero?.title?.main || "",
+          sub: hero?.title?.sub || "",
         }}
-        subtitle={hero.subtitle}
-        image={hero.photo}
+        subtitle={hero?.subtitle || ""}
+        image={hero?.photo || ""}
         showSearch={false}
-        imageAlt={hero.imageAlt}
+        imageAlt={hero?.photo?.alt || ""}
       />
-      <ServiceGrid initialTab={type} />
+      <ServiceGrid initialTab={type} data={serviceGrid} />
       <ServiceSchema
         type={serviceType}
-        services={serviceGrid.services[serviceType]}
-        description={serviceGrid.descriptions[serviceType]}
+        services={serviceGrid?.services?.[serviceType] || []}
+        description={serviceGrid?.descriptions?.[serviceType] || ""}
       />
-      <FAQ />
+      <FAQ data={faq} />
     </>
   );
 }

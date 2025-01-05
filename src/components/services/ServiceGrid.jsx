@@ -4,13 +4,12 @@ import { useState, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import styles from "@/styles/components/services/ServiceGrid.module.css";
 import Image from "next/image";
-import { serviceGrid } from "@/content/pages/services";
 
-export default function ServiceGrid({ initialTab }) {
+export default function ServiceGrid({ initialTab, data }) {
   const router = useRouter();
   const pathname = usePathname();
   const [activeTab, setActiveTab] = useState(
-    serviceGrid.typesOfService.find(
+    data.typesOfService.find(
       (type) => type.toLowerCase().replace(" ", "-") === initialTab
     )
   );
@@ -24,20 +23,20 @@ export default function ServiceGrid({ initialTab }) {
   // Update tab when URL changes
   useEffect(() => {
     const urlType = pathname.split("/").pop();
-    const matchingType = serviceGrid.typesOfService.find(
+    const matchingType = data.typesOfService.find(
       (type) => type.toLowerCase().replace(" ", "-") === urlType
     );
     if (matchingType) {
       setActiveTab(matchingType);
     }
-  }, [pathname]);
+  }, [pathname, data.typesOfService]);
 
   return (
     <div className={styles.container}>
       <div className={styles.content}>
         {/* Tabs */}
         <div className={styles.tabs}>
-          {serviceGrid.typesOfService.map((type, index) => (
+          {data.typesOfService.map((type, index) => (
             <button
               key={index}
               className={`${styles.tabButton} ${
@@ -55,12 +54,12 @@ export default function ServiceGrid({ initialTab }) {
           <h2>
             {activeTab} <span>Services</span>
           </h2>
-          <p>{serviceGrid.descriptions[activeTab]}</p>
+          <p>{data.descriptions[activeTab]}</p>
         </div>
 
         {/* Service Grid */}
         <div className={styles.grid}>
-          {serviceGrid.services[activeTab].map((service, index) => (
+          {data.services[activeTab].map((service, index) => (
             <div key={index} className={styles.card}>
               <div className={styles.icon}>
                 <Image

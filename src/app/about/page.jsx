@@ -1,5 +1,6 @@
 import Hero from "@/components/common/Hero";
-import { hero } from "@/content/pages/about-us.json";
+import aboutContent from "@/content/pages/about-us.json";
+const { hero } = aboutContent;
 
 export const metadata = {
   title: "About Us | ElderlyEase",

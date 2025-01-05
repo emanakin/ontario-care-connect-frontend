@@ -1,6 +1,6 @@
 import Hero from "@/components/common/Hero";
-import { hero } from "@/content/pages/faq.json";
-
+import faqContent from "@/content/pages/contact-us.json";
+const { hero } = faqContent;
 export const metadata = {
   title: "Frequently Asked Questions | ElderlyEase",
   description:

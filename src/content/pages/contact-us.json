@@ -17,32 +17,61 @@
       "weekends": "9:00 AM - 5:00 PM"
     }
   },
-  "form": {
-    "title": "Send us a message",
-    "fields": [
+  "contactSection": {
+    "title": "Get in Touch With Us",
+    "subtitle": "We're here to answer your questions and provide the support you need",
+    "contactInfo": [
       {
-        "name": "fullName",
-        "label": "Full Name",
-        "type": "text",
-        "required": true
+        "title": "Call Us",
+        "subtitle": "+1 (555) 123-4567",
+        "icon": "/icons/contact/phone.svg"
       },
       {
-        "name": "email",
-        "label": "Email Address",
-        "type": "email",
-        "required": true
+        "title": "Email Us",
+        "subtitle": "care@elderlyease.com",
+        "icon": "/icons/contact/email.svg"
       },
       {
-        "name": "phone",
-        "label": "Phone Number",
-        "type": "tel",
-        "required": false
+        "title": "Visit Us",
+        "subtitle": "123 Care Street, St. Catharines, ON L2T 1A1",
+        "icon": "/icons/contact/location.svg"
+      }
+    ],
+    "socialLinks": [
+      {
+        "title": "Facebook",
+        "url": "https://facebook.com/elderlyease",
+        "icon": "/icons/contact/facebook.svg"
       },
       {
-        "name": "message",
-        "label": "Your Message",
-        "type": "textarea",
-        "required": true
+        "title": "LinkedIn",
+        "url": "https://linkedin.com/company/elderlyease",
+        "icon": "/icons/contact/linkedin.svg"
+      },
+      {
+        "title": "Instagram",
+        "url": "https://instagram.com/elderlyease",
+        "icon": "/icons/contact/instagram.svg"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Have questions? We've got answers.",
+    "imageAlt": "FAQ image",
+    "image": "/images/faq/hero.jpg",
+    "cards": [
+      {
+        "title": "How do I schedule a service?",
+        "body": "You can schedule a service by calling our office at (555) 123-4567 or by filling out the form on our website."
+      },
+      {
+        "title": "What types of services do you offer?",
+        "body": "We offer a wide range of services, including home care, respite care, and specialized care for seniors with specific needs."
+      },
+      {
+        "title": "How much does your service cost?",
+        "body": "The cost of our services varies depending on the type of service and the level of care required. We offer competitive pricing and flexible payment options to meet your needs."
       }
     ]
   }
