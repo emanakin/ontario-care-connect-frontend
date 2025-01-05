@@ -4,10 +4,11 @@ import ServiceGrid from "@/components/services/ServiceGrid";
 import ServiceSchema from "@/components/services/ServiceSchema";
 import { serviceGrid } from "@/content/pages/services";
 import { redirect } from "next/navigation";
+import FAQ from "@/components/common/FAQ";
 
 // Validate service type and generate metadata
 export async function generateMetadata({ params }) {
-  const { type } = params;
+  const { type } = await params;
   const validTypes = serviceGrid.typesOfService.map((t) =>
     t.toLowerCase().replace(" ", "-")
   );
@@ -38,9 +39,11 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function ServicePage({ params }) {
+export default async function ServicePage({ params }) {
+  const { type } = await params;
+
   const serviceType = serviceGrid.typesOfService.find(
-    (t) => t.toLowerCase().replace(" ", "-") === params.type
+    (t) => t.toLowerCase().replace(" ", "-") === type
   );
 
   return (
@@ -55,12 +58,13 @@ export default function ServicePage({ params }) {
         showSearch={false}
         imageAlt={hero.imageAlt}
       />
-      <ServiceGrid initialTab={params.type} />
+      <ServiceGrid initialTab={type} />
       <ServiceSchema
         type={serviceType}
         services={serviceGrid.services[serviceType]}
         description={serviceGrid.descriptions[serviceType]}
       />
+      <FAQ />
     </>
   );
 }

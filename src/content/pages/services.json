@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": {
-      "main": "Support Your In Home",
+      "main": "Support Your In-Home Care",
       "sub": "Needs"
     },
     "subtitle": "From basic home help to complex medical care, we offer a full range of services tailored to your needs.",
@@ -10,9 +10,9 @@
   "serviceGrid": {
     "typesOfService": ["Home Support", "Personal Care", "Complex Care"],
     "descriptions": {
-      "Home Support": "Daily assistance with household tasks and activities to maintain a comfortable living environment",
-      "Personal Care": "Compassionate support with personal hygiene and daily living activities",
-      "Complex Care": "Highly skilled tasks performed by registered health professionals (Registered nurses or registered practical nurses)"
+      "Home Support": "Comprehensive daily assistance with household tasks and activities designed to help you maintain a comfortable, clean and organized living environment. Our caregivers help with everything from housekeeping and meal preparation to running errands and providing companionship.",
+      "Personal Care": "Compassionate and dignified support with personal hygiene and daily living activities, delivered by trained caregivers who understand the importance of maintaining independence while providing assistance with bathing, dressing, grooming, mobility, and other essential personal care needs.",
+      "Complex Care": "Highly skilled medical and nursing care performed by registered health professionals (Registered nurses or registered practical nurses) who are trained to handle complex medical needs including wound care, medication management, catheter care, and other specialized medical procedures in the comfort of your home."
     },
     "services": {
       "Home Support": [
@@ -142,5 +142,25 @@
         }
       ]
     }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about our services and how we can help you.",
+    "image": "/images/faq/mom-daughter.jpeg",
+    "imageAlt": "FAQ Hero",
+    "cards": [
+      {
+        "title": "What services do you provide?",
+        "body": "We offer a comprehensive range of services including personal care, home support, and complex medical care. Our services cover everything from daily assistance with meals and hygiene to specialized medical care like wound management and medication administration."
+      },
+      {
+        "title": "How are your caregivers selected and trained?",
+        "body": "All our caregivers undergo rigorous background checks, certification verification, and extensive training. They are selected based on their experience, qualifications, and genuine passion for elderly care. We ensure ongoing training to maintain the highest standards of care."
+      },
+      {
+        "title": "How do I get started with your services?",
+        "body": "Getting started is simple. Contact us for a free consultation where we'll assess your needs, answer your questions, and create a personalized care plan. We'll then match you with the most suitable caregiver based on your specific requirements and preferences."
+      }
+    ]
   }
 }

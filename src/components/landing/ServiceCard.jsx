@@ -13,6 +13,10 @@ export default function ServiceCard({
   link,
   photo,
 }) {
+  if (!title || !description || !photo) {
+    return null;
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -52,7 +56,7 @@ export default function ServiceCard({
             <Link
               href={link}
               className={styles.linkIcon}
-              aria-label="Learn more"
+              aria-label={`Learn more about ${title}`}
             >
               <motion.svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +105,7 @@ export default function ServiceCard({
       >
         <Image
           src={photo}
-          alt={`${title} service`}
+          alt={`${title} service illustration`}
           width={600}
           height={400}
           quality={100}

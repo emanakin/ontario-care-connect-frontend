@@ -65,7 +65,7 @@ export default function Header() {
         {/* Logo Section */}
         <div className={styles.logo}>
           <Image
-            src="/logo.png"
+            src="/logo-dark.png"
             alt="ElderlyEase Logo"
             width={936}
             height={262}

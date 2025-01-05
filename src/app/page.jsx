@@ -1,3 +1,14 @@
+import HeroContainer from "@/components/landing/HeroContainer";
+import FactCardDivider from "@/components/landing/FactCardDivider";
+import HowItWorks from "@/components/landing/HowItWorks";
+import TypeOfServices from "@/components/landing/TypeOfServices";
+import Testimonials from "@/components/landing/Testimonials";
+import ForCareGivers from "@/components/landing/ForCaregivers";
+import ForCareReceivers from "@/components/landing/ForCareReceivers";
+import FAQ from "@/components/landing/FAQ";
+import Resources from "@/components/landing/Resources";
+import homeContent from "@/content/pages/home.json";
+
 export const metadata = {
   title: "Home Care Services | ElderlyEase",
   description:
@@ -12,28 +23,29 @@ export const metadata = {
   // Additional fields like 'robots'
 };
 
-import HeroContainer from "@/components/landing/HeroContainer";
-import FactCardDivider from "@/components/landing/FactCardDivider";
-import HowItWorks from "@/components/landing/HowItWorks";
-import TypeOfServices from "@/components/landing/TypeOfServices";
-import Testamonials from "@/components/landing/Testamonials";
-import ForCareGivers from "@/components/landing/ForCaregivers";
-import ForCareReceivers from "@/components/landing/ForCareReceivers";
-import FAQ from "@/components/landing/FAQ";
-import Resources from "@/components/landing/Resources";
-
 export default function LandingPage() {
+  const {
+    hero,
+    howItWorks,
+    services,
+    testimonials,
+    careGivers,
+    careReceivers,
+    faq,
+    articles,
+  } = homeContent;
+
   return (
     <>
-      <HeroContainer />
+      <HeroContainer data={hero} />
       <FactCardDivider />
-      <HowItWorks />
-      <TypeOfServices />
-      <Testamonials />
-      <ForCareGivers />
-      <ForCareReceivers />
-      <FAQ />
-      <Resources />
+      <HowItWorks data={howItWorks} />
+      <TypeOfServices data={services} />
+      <Testimonials data={testimonials} />
+      <ForCareGivers data={careGivers} />
+      <ForCareReceivers data={careReceivers} />
+      <FAQ data={faq} />
+      <Resources data={articles} />
     </>
   );
 }

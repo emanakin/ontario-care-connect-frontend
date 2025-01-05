@@ -4,10 +4,13 @@ import { useRef } from "react";
 import styles from "@/styles/components/landing/Resources.module.css";
 import ArticleCard from "./ArticleCard";
 import { motion } from "framer-motion";
-import { articles } from "@/content/pages/home.json";
 
-export default function Resources() {
+export default function Resources({ data }) {
   const carouselRef = useRef(null);
+
+  if (!data?.cards?.length) {
+    return null;
+  }
 
   const scroll = (direction) => {
     if (carouselRef.current) {
@@ -24,8 +27,8 @@ export default function Resources() {
       <div className={styles.content}>
         <div className={styles.topRow}>
           <div>
-            <h2>{articles.title}</h2>
-            <p>{articles.description}</p>
+            <h2>{data.title}</h2>
+            <p>{data.description}</p>
           </div>
           <div className={styles.carouselControls}>
             <button
@@ -66,7 +69,7 @@ export default function Resources() {
         </div>
         <div className={styles.carouselWrapper}>
           <div ref={carouselRef} className={styles.carousel}>
-            {articles.cards.map((article, idx) => (
+            {data.cards.map((article, idx) => (
               <ArticleCard key={idx} {...article} />
             ))}
           </div>

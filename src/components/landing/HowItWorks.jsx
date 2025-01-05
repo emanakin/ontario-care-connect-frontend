@@ -2,10 +2,13 @@
 
 import styles from "@/styles/components/landing/HowItWorks.module.css";
 import HowItWorksCard from "./HowItWorksCard";
-import { howItWorks } from "@/content/pages/home.json";
 import { motion } from "framer-motion";
 
-export default function HowItWorks() {
+export default function HowItWorks({ data }) {
+  if (!data?.steps?.length) {
+    return null;
+  }
+
   return (
     <section className={styles.container}>
       <motion.div
@@ -22,12 +25,12 @@ export default function HowItWorks() {
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          <h2>{howItWorks.title}</h2>
-          <p>{howItWorks.description}</p>
+          <h2>{data.title}</h2>
+          <p>{data.description}</p>
         </motion.div>
 
         <div className={styles.cards}>
-          {howItWorks.steps.map((step, index) => (
+          {data.steps.map((step, index) => (
             <HowItWorksCard
               key={index}
               icon={step.icon}

@@ -66,8 +66,8 @@ export default function ServiceGrid({ initialTab }) {
                 <Image
                   src={service.icon}
                   alt={service.title}
-                  width={24}
-                  height={24}
+                  width={35}
+                  height={35}
                 />
               </div>
               <h3>{service.title}</h3>

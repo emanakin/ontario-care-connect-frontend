@@ -2,10 +2,13 @@
 
 import styles from "@/styles/components/landing/ForCareUsers.module.css";
 import Image from "next/image";
-import { careGivers } from "@/content/pages/home.json";
 import { motion } from "framer-motion";
 
-export default function ForCareGivers() {
+export default function ForCaregivers({ data }) {
+  if (!data?.cards?.length) {
+    return null;
+  }
+
   return (
     <section className={styles.container}>
       <div className={styles.content}>
@@ -16,7 +19,7 @@ export default function ForCareGivers() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            {careGivers.title}
+            {data.title}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -24,10 +27,10 @@ export default function ForCareGivers() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            {careGivers.description}
+            {data.description}
           </motion.p>
           <div className={styles.cards}>
-            {careGivers.cards.map((card, idx) => (
+            {data.cards.map((card, idx) => (
               <motion.div
                 key={idx}
                 className={styles.card}

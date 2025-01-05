@@ -69,11 +69,11 @@
 }
 
 .link:hover {
-  color: #0f4c75;
+  color: #4d8ff2;
 }
 
 .selectedLink {
-  color: #0f4c75;
+  color: #4d8ff2;
 }
 
 .underline {
@@ -83,7 +83,7 @@
   transform: translateX(-50%);
   width: 0.35rem;
   height: 0.35rem;
-  background: #0f4c75;
+  background: #4d8ff2;
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(15, 76, 117, 0.2);
 }
@@ -116,8 +116,8 @@
 
 .registerButton {
   padding: 0.8rem 1.25rem;
-  border-radius: 0.625rem;
-  background: #0f4c75;
+  border-radius: 1rem;
+  background: #4d8ff2;
   color: #ffffff;
   font-size: clamp(0.875rem, 1vw, 1rem);
   font-weight: 500;
@@ -129,7 +129,7 @@
 }
 
 .registerButton:hover {
-  background: #0a314b;
+  background: #3d76cc;
 }
 
 /* Hamburger Menu */

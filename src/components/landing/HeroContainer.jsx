@@ -1,8 +1,7 @@
 import Image from "next/image";
 import styles from "@/styles/components/landing/HeroContainer.module.css";
-import { hero } from "@/content/pages/home.json";
 
-export default function HeroContainer() {
+export default function HeroContainer({ data }) {
   return (
     <section className={styles.container}>
       <Image
@@ -19,14 +18,14 @@ export default function HeroContainer() {
       <div className={styles.content}>
         <div className={styles.text}>
           <h1>
-            <span>{hero.title.prefix}</span>
-            {" " + hero.title.main + " "}
-            <span>{hero.title.suffix}</span>
+            <span>{data.title.prefix}</span>
+            {" " + data.title.main + " "}
+            <span>{data.title.suffix}</span>
           </h1>
-          <p>{hero.subtitle}</p>
+          <p>{data.subtitle}</p>
           <div className={styles.buttons}>
-            <button>{hero.buttons.primary}</button>
-            <button>{hero.buttons.secondary}</button>
+            <button>{data.buttons.primary}</button>
+            <button>{data.buttons.secondary}</button>
           </div>
         </div>
       </div>

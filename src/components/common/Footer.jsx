@@ -16,7 +16,7 @@ export default function Footer() {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Image
-                src="/logo.png"
+                src="/logo-white.png"
                 alt="ElderlyEase Logo"
                 width={827}
                 height={188}
@@ -134,7 +134,7 @@ export default function Footer() {
         <hr className={styles.divider} />
 
         <div className={styles.bottomRow}>
-          <p>All Rights Reserved | ElderlyEase 2024</p>
+          <p>All Rights Reserved | ElderlyEase 2025</p>
         </div>
       </div>
     </footer>

@@ -3,9 +3,12 @@
 import Image from "next/image";
 import styles from "@/styles/components/landing/ForCareUsers.module.css";
 import { motion } from "framer-motion";
-import { careReceivers } from "@/content/pages/home.json";
 
-export default function ForCareReceivers() {
+export default function ForCareReceivers({ data }) {
+  if (!data?.cards?.length) {
+    return null;
+  }
+
   return (
     <section className={styles.container}>
       <div className={`${styles.content} ${styles.flipped}`}>
@@ -16,7 +19,7 @@ export default function ForCareReceivers() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            {careReceivers.title}
+            {data.title}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -24,10 +27,10 @@ export default function ForCareReceivers() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            {careReceivers.description}
+            {data.description}
           </motion.p>
           <div className={styles.cards}>
-            {careReceivers.cards.map((card, idx) => (
+            {data.cards.map((card, idx) => (
               <motion.div
                 key={idx}
                 className={styles.card}

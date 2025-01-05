@@ -53,18 +53,21 @@
 }
 
 .header h2 {
-  color: #1e40af;
-  font-size: 2rem;
+  color: #003588;
+  font-size: 2.25rem;
+  font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
 .header span {
-  color: #3b82f6;
+  color: #266afb;
 }
 
 .header p {
   color: #64748b;
   font-size: 0.875rem;
+  max-width: 850px;
+  margin: 0 auto;
 }
 
 .grid {
@@ -74,9 +77,9 @@
 }
 
 .card {
-  background: #f8fafc;
+  background: rgba(77, 143, 242, 0.12);
   border-radius: 1rem;
-  padding: 2rem 1.5rem;
+  padding: 3.5rem 1.5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -85,18 +88,18 @@
 }
 
 .icon {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 4.75rem;
+  height: 4.75rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #eff6ff;
-  border-radius: 0.75rem;
+  background: rgba(77, 143, 242, 0.88);
+  border-radius: 50%;
 }
 
 .card h3 {
   font-size: 1rem;
-  color: #1e293b;
+  color: rgba(0, 0, 0, 0.5);
   font-weight: 500;
   line-height: 1.4;
 }

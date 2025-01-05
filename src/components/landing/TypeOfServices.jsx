@@ -1,17 +1,20 @@
 import styles from "@/styles/components/landing/TypeOfServices.module.css";
 import ServiceCard from "./ServiceCard";
-import { services } from "@/content/pages/home.json";
 
-export default function TypeOfServices() {
+export default function TypeOfServices({ data }) {
+  if (!data?.cards?.length) {
+    return null;
+  }
+
   return (
     <section className={styles.container}>
       <div className={styles.content}>
         <div className={styles.text}>
-          <h2>{services.title}</h2>
-          <p>{services.description}</p>
+          <h2>{data.title}</h2>
+          <p>{data.description}</p>
         </div>
         <div className={styles.cards}>
-          {services.cards.map((card, index) => (
+          {data.cards.map((card, index) => (
             <ServiceCard
               key={index}
               flipped={index % 2 === 0}

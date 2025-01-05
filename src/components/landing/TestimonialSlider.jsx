@@ -2,28 +2,28 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import styles from "@/styles/components/landing/Testamonials.module.css";
+import styles from "@/styles/components/landing/Testimonials.module.css";
 import { motion, AnimatePresence } from "framer-motion";
-import { testimonials } from "@/content/pages/home.json";
 
-export default function TestamonialSlider() {
+export default function TestimonialSlider({ data }) {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1); // 1 for next, -1 for prev
 
+  if (!data?.items?.length) {
+    return null;
+  }
+
   const nextTestimonial = () => {
     setDirection(1);
-    setIndex((prev) => (prev + 1) % testimonials.items.length);
+    setIndex((prev) => (prev + 1) % data.items.length);
   };
 
   const prevTestimonial = () => {
     setDirection(-1);
-    setIndex(
-      (prev) =>
-        (prev - 1 + testimonials.items.length) % testimonials.items.length
-    );
+    setIndex((prev) => (prev - 1 + data.items.length) % data.items.length);
   };
 
-  const current = testimonials.items[index];
+  const current = data.items[index];
 
   // Create an array of stars based on rating
   const stars = Array.from({ length: current.rating }, (_, i) => (
