@@ -138,19 +138,9 @@
   flex-direction: column;
   gap: 0.2rem;
   cursor: pointer;
-  background-color: #ffffff;
-  border-radius: 40%;
   padding: 0.45rem;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.hamburger:hover {
-  transform: scale(1.1);
-  background-color: #f5f5f5;
-}
-
-.hamburger:active {
-  transform: scale(0.95);
+  transition: transform 0.3s ease;
+  z-index: 1002; /* Ensure it's above the mobile menu */
 }
 
 .bar {
@@ -158,42 +148,47 @@
   height: 0.2rem;
   background-color: #1b262c;
   border-radius: 0.25rem;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.hamburger:hover .bar {
-  background-color: #0f4c75;
+/* Animation for hamburger to X */
+.hamburger.open .bar:first-child {
+  transform: translateY(0.4rem) rotate(45deg);
 }
 
-.hamburger:hover .bar:first-child {
-  transform: translateY(1px);
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
 }
 
-.hamburger:hover .bar:last-child {
-  transform: translateY(-1px);
+.hamburger.open .bar:last-child {
+  transform: translateY(-0.4rem) rotate(-45deg);
 }
 
-/* Mobile Menu (Side Drawer) */
+/* Mobile Menu (Full Screen) */
 .mobileMenu {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 70%;
-  max-width: 300px;
+  right: 0; /* Changed from left to right */
+  width: 100%; /* Full width */
   height: 100vh;
   background-color: #ffffff;
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-  padding: 1rem 0.75rem;
+  padding-top: 5rem; /* Increased padding to move links down */
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  z-index: 1001;
-  transform: translateX(-100%);
+  align-items: center; /* Center items */
+  gap: 2rem;
+  z-index: 1000;
+  transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
 }
 
 .mobileMenu.open {
   transform: translateX(0);
+}
+
+/* Remove the close button styles since we're using the hamburger */
+.closeButton {
+  display: none;
 }
 
 /* Mobile-only link styling in side menu */
@@ -206,21 +201,6 @@
 }
 
 .mobileLink:hover {
-  color: #0f4c75;
-}
-
-/* Close button for mobile menu */
-.closeButton {
-  position: absolute;
-  align-self: flex-end;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #1b262c;
-}
-
-.closeButton:hover {
   color: #0f4c75;
 }
 
@@ -237,10 +217,73 @@
   .hamburger {
     display: flex;
   }
+
+  .logo {
+    z-index: 1002;
+  }
+
+  .logo img {
+    z-index: 1002;
+    width: clamp(120px, 30vw, 200px);
+    height: auto;
+    display: flex;
+    align-items: center;
+    transition: filter 0.3s ease;
+  }
+
+  .container {
+    background-color: transparent;
+    transition: none; /* Remove default transition */
+  }
+
+  .container.menuOpen {
+    background-color: transparent;
+  }
 }
 
 @media (min-width: 928px) {
   .mobileMenu {
     display: none; /* Ensure mobile menu is hidden on desktop */
   }
+}
+
+/* Add header overlay for mobile menu */
+.headerOverlay {
+  display: none;
+}
+
+@media (max-width: 928px) {
+  .headerOverlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4rem;
+    background: linear-gradient(to left, #4d8ff2 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: left;
+    z-index: 1001;
+    transition: background-position 0.3s ease-in-out;
+  }
+
+  .headerOverlay.open {
+    background-position: right;
+  }
+}
+
+/* Update logo for mobile menu state */
+@media (max-width: 928px) {
+  .logo img {
+    transition: filter 0.3s ease;
+  }
+
+  .container.menuOpen .logo img {
+    filter: brightness(0) invert(1); /* Makes logo white */
+  }
+}
+
+/* Update hamburger bars color when menu is open */
+.container.menuOpen .bar {
+  background-color: #ffffff;
 }

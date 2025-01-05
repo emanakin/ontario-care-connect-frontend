@@ -13,6 +13,7 @@ const LINKS = ["Home", "Services", "About", "Resources", "Contact", "FAQ"];
 // 2. Helper function for nicely formatting a pathname (e.g., "/contact-us" -> "Contact Us")
 function formatPathToLink(pathname) {
   if (pathname === "/") return "Home";
+  if (pathname === "/faq") return "FAQ";
   return pathname
     .slice(1)
     .split("-")
@@ -40,10 +41,7 @@ export default function Header() {
   // 3. Use the helper and, if guaranteed valid, remove the LINKS.includes(...) check
   useEffect(() => {
     const basePath = pathname.split("/")[1] || ""; // e.g., "/services/x" -> ["", "services", "x"]
-    const linkLabel = basePath
-      ? basePath.charAt(0).toUpperCase() + basePath.slice(1)
-      : "Home";
-
+    const linkLabel = formatPathToLink("/" + basePath);
     setSelectedLink(linkLabel);
   }, [pathname]);
 
@@ -51,7 +49,7 @@ export default function Header() {
     <motion.header
       className={`${styles.container} ${isScrolled ? styles.scrolled : ""} ${
         !isVisible ? styles.hidden : ""
-      }`}
+      } ${menuOpen ? styles.menuOpen : ""}`}
       initial={{ backgroundColor: "rgba(255, 255, 255, 0)" }}
       animate={{
         backgroundColor: isScrolled
@@ -61,6 +59,10 @@ export default function Header() {
       }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
     >
+      <div
+        className={`${styles.headerOverlay} ${menuOpen ? styles.open : ""}`}
+      />
+
       <div className={styles.content}>
         {/* Logo Section */}
         <div className={styles.logo}>
@@ -69,11 +71,15 @@ export default function Header() {
             alt="ElderlyEase Logo"
             width={936}
             height={262}
+            priority
           />
         </div>
 
         {/* Hamburger Icon (Mobile) */}
-        <div className={styles.hamburger} onClick={() => setMenuOpen(true)}>
+        <div
+          className={`${styles.hamburger} ${menuOpen ? styles.open : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
           <div className={styles.bar}></div>
           <div className={styles.bar}></div>
           <div className={styles.bar}></div>
@@ -113,17 +119,14 @@ export default function Header() {
 
       {/* Mobile Side Menu */}
       <div className={`${styles.mobileMenu} ${menuOpen ? styles.open : ""}`}>
-        <button
-          className={styles.closeButton}
-          onClick={() => setMenuOpen(false)}
-          aria-label="Close menu"
-        >
-          &times;
-        </button>
         {LINKS.map((link) => (
-          <a
+          <Link
             key={link}
-            href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
+            href={
+              link === "Home"
+                ? "/"
+                : `/${link.toLowerCase().replace(/\s+/g, "-")}`
+            }
             className={styles.mobileLink}
             onClick={() => {
               setSelectedLink(link);
@@ -131,7 +134,7 @@ export default function Header() {
             }}
           >
             {link}
-          </a>
+          </Link>
         ))}
       </div>
     </motion.header>
