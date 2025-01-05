@@ -119,6 +119,7 @@ export default function Header() {
 
       {/* Mobile Side Menu */}
       <div className={`${styles.mobileMenu} ${menuOpen ? styles.open : ""}`}>
+        {/* Navigation Links */}
         {LINKS.map((link) => (
           <Link
             key={link}
@@ -127,7 +128,9 @@ export default function Header() {
                 ? "/"
                 : `/${link.toLowerCase().replace(/\s+/g, "-")}`
             }
-            className={styles.mobileLink}
+            className={`${styles.mobileLink} ${
+              selectedLink === link ? styles.selected : ""
+            }`}
             onClick={() => {
               setSelectedLink(link);
               setMenuOpen(false);
@@ -136,6 +139,13 @@ export default function Header() {
             {link}
           </Link>
         ))}
+
+        {/* Separator and Auth Buttons */}
+        <hr className={styles.mobileDivider} />
+        <div className={styles.mobileAuthButtons}>
+          <button className={styles.mobileLoginButton}>Login</button>
+          <button className={styles.mobileRegisterButton}>Register</button>
+        </div>
       </div>
     </motion.header>
   );
