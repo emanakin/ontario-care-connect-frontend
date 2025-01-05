@@ -111,9 +111,13 @@ export default function Header() {
 
         {/* Buttons Section (Desktop) */}
         <div className={styles.buttons}>
-          <span className={styles.login}>Login</span>
+          <Link href="/login" className={styles.login}>
+            Login
+          </Link>
           <span className={styles.divider}>|</span>
-          <button className={styles.registerButton}>Register</button>
+          <Link href="/register" className={styles.registerButton}>
+            Register
+          </Link>
         </div>
       </div>
 
@@ -143,8 +147,12 @@ export default function Header() {
         {/* Separator and Auth Buttons */}
         <hr className={styles.mobileDivider} />
         <div className={styles.mobileAuthButtons}>
-          <button className={styles.mobileLoginButton}>Login</button>
-          <button className={styles.mobileRegisterButton}>Register</button>
+          <Link href="/login" className={styles.mobileLoginButton}>
+            Login
+          </Link>
+          <Link href="/register" className={styles.mobileRegisterButton}>
+            Register
+          </Link>
         </div>
       </div>
     </motion.header>
