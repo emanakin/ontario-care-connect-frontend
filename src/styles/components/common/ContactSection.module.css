@@ -1,0 +1,46 @@
+.container {
+  text-align: center;
+  margin: 4rem auto 6rem;
+}
+
+.content {
+  background: #4d8ff225;
+  border-radius: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 0rem;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.content h2 span {
+  color: #2563eb;
+}
+
+.content p {
+  color: #6b7280;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.content button {
+  background: #1f2937;
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.content button:hover {
+  background: #111827;
+}

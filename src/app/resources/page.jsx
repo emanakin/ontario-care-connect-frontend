@@ -1,6 +1,9 @@
 import Hero from "@/components/common/Hero";
-import resourcesContent from "@/content/pages/resources.json";
-const { hero } = resourcesContent;
+import ArticleContainer from "@/components/resources/ArticleContainer";
+import BlogContainer from "@/components/resources/BlogContainer";
+import ContactSection from "@/components/common/ContactSection";
+import resourceContent from "@/content/pages/resources.json";
+const { hero, articles, blogs, contact } = resourceContent;
 
 export const metadata = {
   title: "Resources | ElderlyEase",
@@ -20,6 +23,13 @@ export default function ResourcesPage() {
         image={hero.image}
         imageAlt={hero.imageAlt}
       />
+      <ArticleContainer
+        title={articles.title}
+        subtitle={articles.description}
+        articles={articles.articleList}
+      />
+      <BlogContainer data={blogs} />
+      <ContactSection data={contact} />
     </>
   );
 }

@@ -1,0 +1,120 @@
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Large card stays in column layout */
+.large {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Small card uses row layout */
+.small {
+  display: flex;
+  flex-direction: row;
+  height: 140px; /* Fixed height for small cards */
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.large .imageWrapper {
+  height: 400px;
+}
+
+.small .imageWrapper {
+  width: 200px; /* Fixed width for image container in small cards */
+  min-width: 200px; /* Prevent shrinking */
+  height: 100%; /* Full height of the card */
+}
+
+.content {
+  padding: 1.25rem;
+}
+
+.small .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.date {
+  color: #2563eb;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.large .title {
+  font-size: 1.5rem;
+}
+
+.small .title {
+  /* Ensure text doesn't overflow in small cards */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.readMore {
+  display: inline-flex;
+  align-items: center;
+  color: #111827;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background: #f3f4f6;
+  transition: all 0.2s ease;
+  width: fit-content;
+}
+
+.readMore:hover {
+  background: #e5e7eb;
+}
+
+.small .readMore {
+  align-self: flex-start;
+}
+
+/* Add responsive behavior */
+@media (max-width: 640px) {
+  .small {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .small .imageWrapper {
+    width: 100%;
+    height: 200px;
+  }
+}

@@ -6,7 +6,7 @@ import Testimonials from "@/components/landing/Testimonials";
 import ForCareGivers from "@/components/landing/ForCaregivers";
 import ForCareReceivers from "@/components/landing/ForCareReceivers";
 import FAQ from "@/components/landing/FAQ";
-import Resources from "@/components/landing/Resources";
+import BlogContainer from "@/components/resources/BlogContainer";
 import homeContent from "@/content/pages/home.json";
 
 export const metadata = {
@@ -45,7 +45,7 @@ export default function LandingPage() {
       <ForCareGivers data={careGivers} />
       <ForCareReceivers data={careReceivers} />
       <FAQ data={faq} />
-      <Resources data={articles} />
+      <BlogContainer data={articles} />
     </>
   );
 }

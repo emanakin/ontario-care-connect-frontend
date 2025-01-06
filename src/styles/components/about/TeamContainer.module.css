@@ -1,0 +1,47 @@
+.container {
+  padding: 4rem 1rem;
+  background-color: #f8f9fa;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.content h2 span {
+  color: #4285f4;
+}
+
+.content > p {
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 1024px) {
+  .cards {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .cards {
+    gap: 1rem;
+  }
+}

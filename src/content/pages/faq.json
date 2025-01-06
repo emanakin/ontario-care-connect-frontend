@@ -10,26 +10,292 @@
   },
   "categories": [
     {
-      "title": "General Questions",
+      "title": "For Caregiver",
+      "icon": "/icons/faq/for_caregiver.svg",
       "questions": [
         {
-          "question": "What services do you offer?",
-          "answer": "We provide a range of home care services including personal care, companionship, housekeeping, and specialized medical care."
+          "question": "How do I receive proper training to care for clients with specialized needs?",
+          "answer": "We offer a range of training resources, including workshops, online modules, and mentorship programs. Depending on client needs, we can also connect you with certified professionals for hands-on experience. This ensures you have the knowledge and confidence to deliver high-quality care."
         },
         {
-          "question": "What areas do you serve?",
-          "answer": "We currently serve the entire Niagara region and surrounding areas."
+          "question": "Can I choose which clients I work with?",
+          "answer": "We do our best to match you with clients whose needs and personalities align with your skills and interests. However, we also take into account the urgency and specific requirements of our overall client base."
+        },
+        {
+          "question": "What if I need time off or a schedule change?",
+          "answer": "We understand that caregivers need work-life balance too. You can request schedule changes or time off through our scheduling portal or by contacting our Care Coordination team. We will do our best to accommodate your request while ensuring that our clients' care needs are met."
+        },
+        {
+          "question": "Is there an on-call support line if I face an emergency at a client’s home?",
+          "answer": "Yes. We maintain a 24/7 on-call support line for all caregivers. In the event of an emergency, contact us immediately, and we will provide guidance or dispatch additional resources as needed."
+        },
+        {
+          "question": "How do I handle sensitive issues like personal hygiene or emotional distress?",
+          "answer": "Our training programs and resource materials cover best practices for compassionate communication, maintaining privacy and dignity, and handling delicate tasks like bathing or toileting. Additionally, you can consult with our clinical supervisors if you need more personalized support.",
+          "image": "/images/faq/sensitive_care.jpg"
+        },
+        {
+          "question": "What should I do if a client’s condition suddenly worsens?",
+          "answer": "Contact emergency services if it’s a life-threatening situation. Immediately after, inform our on-call support line. We also encourage you to document any changes in the client’s care plan so our medical team can update recommendations or arrange additional services."
+        },
+        {
+          "question": "How do I document and report my daily care activities?",
+          "answer": "We provide a secure online portal where you can log your tasks, observations, and any concerns. This documentation ensures continuity of care and allows our care team to monitor the client’s well-being more effectively."
+        },
+        {
+          "question": "Are there growth opportunities for caregivers within your organization?",
+          "answer": "Absolutely. We offer career advancement paths such as senior caregiver roles, team leads, and specialized certifications in dementia care, palliative care, and more. We believe in supporting our caregivers’ professional development.",
+          "image": "/images/faq/career_growth.jpg"
+        },
+        {
+          "question": "What resources are available for preventing caregiver burnout?",
+          "answer": "We host regular wellness workshops and provide access to counseling services if you’re feeling overwhelmed. Our resource library also includes stress-management tips and self-care techniques tailored for caregivers."
+        },
+        {
+          "question": "Can I provide feedback or suggestions for improving care protocols?",
+          "answer": "Yes. We value caregiver insights. You can submit feedback or suggestions through our internal portal or discuss them with your supervisor. Continuous improvement is at the heart of our commitment to exceptional care."
         }
       ]
     },
     {
-      "title": "Care Services",
+      "title": "For Care Receiver",
+      "icon": "/icons/faq/for_carereceiver.svg",
       "questions": [
         {
-          "question": "How do you match caregivers with clients?",
-          "answer": "We carefully consider factors such as care needs, personality, schedule, and specific requirements to ensure the best possible match."
+          "question": "What type of personal care can I expect?",
+          "answer": "Personal care services may include bathing assistance, help with dressing, grooming, mobility support, and monitoring of vital signs. Our team tailors each plan to fit your comfort level and medical needs."
+        },
+        {
+          "question": "How do I schedule companionship visits?",
+          "answer": "Scheduling is flexible. You can set up a recurring schedule or request visits on an as-needed basis. Simply contact our care coordinators or use our online platform to select days and times that work best for you.",
+          "image": "/images/faq/companionship.jpg"
+        },
+        {
+          "question": "Can I request a caregiver of a specific gender or language background?",
+          "answer": "Yes. We respect personal preferences and do our best to accommodate cultural, linguistic, or gender-specific needs. Please let us know your preferences during the intake process so we can match you with an appropriate caregiver."
+        },
+        {
+          "question": "What measures do you take to ensure my safety in the home?",
+          "answer": "We conduct a thorough in-home safety assessment, which may include fall-prevention checks, installation of grab bars, and advice on rearranging furniture. Caregivers are also trained in emergency protocols."
+        },
+        {
+          "question": "Are specialized services like post-hospital care or memory care available?",
+          "answer": "Yes, we can provide short-term or long-term specialized care for clients recovering from surgery, undergoing rehabilitation, or living with conditions like dementia or Alzheimer’s. Our trained staff follows doctor-recommended guidelines to ensure a smooth recovery or ongoing support."
+        },
+        {
+          "question": "How do I communicate changes to my care plan?",
+          "answer": "You can reach out to our care coordination team at any time to discuss updates to your care plan, such as increased mobility assistance or adjusted medication reminders. We also recommend scheduled reviews to keep your plan up-to-date."
+        },
+        {
+          "question": "Can family members or friends join in caregiver visits?",
+          "answer": "Yes, in most cases family and friends are welcome to participate, especially if it provides added comfort. However, it’s important to coordinate this in advance with your caregiver to maintain a smooth care routine."
+        },
+        {
+          "question": "How do I handle a caregiver that I feel isn’t a good fit?",
+          "answer": "We encourage open communication. If you’re uncomfortable or believe the match isn’t ideal, contact us. We can arrange for a different caregiver who may better suit your needs and personality."
+        },
+        {
+          "question": "What if I need help outside of regular hours?",
+          "answer": "We provide an on-call support line for urgent needs during evenings, weekends, and holidays. If you have a medical emergency, always contact emergency services first, and then inform us so we can provide additional support."
+        },
+        {
+          "question": "How do I give feedback on my caregiver’s performance?",
+          "answer": "You can submit feedback through our online portal or speak directly to our care management team. Your input helps us continually refine our service quality and ensures that your needs remain at the forefront."
+        }
+      ]
+    },
+    {
+      "title": "Billing & Payments",
+      "icon": "/icons/faq/billing.svg",
+      "questions": [
+        {
+          "question": "What happens if I miss a payment or make a late payment?",
+          "answer": "If you miss a payment or make a late payment, you may be charged a late fee. It’s important to reach out to our billing department as soon as possible to discuss your situation and find a solution. In many cases, we can work with you to set up a payment arrangement that fits your budget. We recognize that older adults and families often manage multiple medical and personal expenses, so we aim to provide flexible options to keep care accessible."
+        },
+        {
+          "question": "Can I request an extension or payment plan if I am unable to pay my bill on time?",
+          "answer": "Absolutely. We understand that financial situations can change, and we want to keep your care services uninterrupted. Our billing department can help you explore short-term extensions or flexible payment plans."
+        },
+        {
+          "question": "How do I receive a receipt for my payment?",
+          "answer": "We provide receipts for every payment transaction. If you pay online, you’ll receive an instant digital receipt via email. You can also request a printed receipt to be mailed to your home."
+        },
+        {
+          "question": "How do I apply for a payment assistance program?",
+          "answer": "We partner with local and provincial organizations that offer financial aid or subsidies for older adults who require home care. Our billing team can guide you through the application process and any necessary documentation."
+        },
+        {
+          "question": "Are there any options for payment assistance if I am experiencing financial difficulties?",
+          "answer": "Yes. You may qualify for hardship programs through community social services, charities, or government agencies. We can direct you to relevant resources and work with you to create a manageable payment plan."
+        },
+        {
+          "question": "Are my credit card or bank details secure on your platform?",
+          "answer": "Security is paramount. We use industry-standard encryption, secure servers, and compliance best practices. We never share your payment details without your explicit consent.",
+          "image": "/images/faq/secure_payment.jpg"
+        },
+        {
+          "question": "Can I set up automatic payments?",
+          "answer": "Yes. We offer an automatic payment option to avoid missed or late payments. You can select a schedule that aligns with your pension or recurring income. Contact our billing department or use the online portal to enroll."
+        },
+        {
+          "question": "Can I pay by check or only by credit card?",
+          "answer": "We accept various payment methods, including checks, bank transfers, and major credit cards. If you plan to pay by check, please allow enough time for mail delivery and clearing."
+        },
+        {
+          "question": "Will my insurance cover any part of these costs?",
+          "answer": "Depending on your insurance policy, certain aspects of home care might be covered or partially reimbursed. We recommend checking with your provider or speaking with our billing department for assistance in submitting claims."
+        },
+        {
+          "question": "How do I view my billing history?",
+          "answer": "Log into your account on our website to view your complete billing history. If you need a paper copy or a larger-print statement, simply request one through our billing team."
+        }
+      ]
+    },
+    {
+      "title": "Accounts & Settings",
+      "icon": "/icons/faq/platform.svg",
+      "questions": [
+        {
+          "question": "How do I create a new account?",
+          "answer": "Visit our website and click on the 'Sign Up' button. You’ll be prompted to provide basic information, such as your name, email address, and phone number. Once completed, you’ll receive a confirmation email to activate your account."
+        },
+        {
+          "question": "What if I forget my password?",
+          "answer": "Click the 'Forgot Password' link on the login page. You’ll receive an email with instructions on how to reset your password. If you don’t see the email, be sure to check your spam folder."
+        },
+        {
+          "question": "Can I add multiple family members to one account?",
+          "answer": "Yes. Our family portal lets you add authorized family members or friends who can view care updates, communicate with caregivers, and manage billing. You can set different permission levels for each user."
+        },
+        {
+          "question": "How do I update my personal or contact information?",
+          "answer": "Log in to your account, go to 'Account Settings,' and select the fields you wish to edit. Be sure to save your changes. If you need assistance, our customer support can guide you."
+        },
+        {
+          "question": "Is there a way to set notification preferences?",
+          "answer": "Absolutely. In your account settings, you can choose which notifications you’d like to receive via email, text, or app alerts. This includes appointment reminders, care notes, and billing notifications.",
+          "image": "/images/faq/notifications.jpg"
+        },
+        {
+          "question": "What if I need to temporarily deactivate my account?",
+          "answer": "You can deactivate your account through the 'Account Settings' page or contact our support team for assistance. Deactivation will pause all services and notifications until you choose to reactivate."
+        },
+        {
+          "question": "Can I request a specific caregiver through my account?",
+          "answer": "Yes. If you have a preferred caregiver, you can use the scheduling tools or the 'Request Caregiver' feature in your account. We will try to accommodate your preference based on availability."
+        },
+        {
+          "question": "How do I link my account with a government or medical portal?",
+          "answer": "In 'Account Settings,' locate the 'Linked Services' section. From there, follow the instructions to securely connect your medical records or government benefits portal, if applicable. This helps streamline care coordination."
+        },
+        {
+          "question": "Can I switch from family viewer access to account admin access?",
+          "answer": "Yes. If you need more control over scheduling, billing, or care notes, contact our support team. We’ll verify your identity and permissions before updating your access level."
+        },
+        {
+          "question": "Are there accessibility features like larger text or voice guidance in my account?",
+          "answer": "We offer adjustable text sizes, high-contrast themes, and compatibility with screen readers. Our goal is to make the online portal accessible to users with varying levels of vision or mobility."
+        }
+      ]
+    },
+    {
+      "title": "Platform Features",
+      "icon": "/icons/faq/platform.svg",
+      "questions": [
+        {
+          "question": "What devices can I use to access the platform?",
+          "answer": "Our platform is web-based and compatible with most smartphones, tablets, laptops, and desktop computers. We recommend using a modern web browser such as Chrome, Firefox, Safari, or Edge."
+        },
+        {
+          "question": "Is there a mobile app?",
+          "answer": "Yes, we provide a mobile app for both iOS and Android. The app offers easy scheduling, real-time care updates, and secure messaging with caregivers."
+        },
+        {
+          "question": "How does real-time care tracking work?",
+          "answer": "When caregivers clock in and out, or mark tasks as completed, you’ll see live updates in your account. This includes notes on activities like medication reminders, meal preparation, or companionship visits."
+        },
+        {
+          "question": "Can I communicate directly with my caregiver through the platform?",
+          "answer": "Yes. Our secure messaging feature allows you and your caregivers to send and receive messages about care needs, schedule changes, or any immediate concerns.",
+          "image": "/images/faq/messages.jpg"
+        },
+        {
+          "question": "What if I have limited tech experience or prefer a simpler interface?",
+          "answer": "We offer a 'Lite' version of the platform with larger text, simplified navigation, and fewer steps to complete essential tasks. If you’d like to switch, just let our support team know."
+        },
+        {
+          "question": "Can caregivers upload photos or status updates for family members to see?",
+          "answer": "Yes. Caregivers can share photos of completed tasks, activity sessions, or general well-being updates. These help family members stay informed and assured that their loved ones are well cared for."
+        },
+        {
+          "question": "Do you offer medication management features?",
+          "answer": "Yes. There’s a dedicated medication module where caregivers can log each administered dose, track refills, and note any side effects. You can view these records in real time."
+        },
+        {
+          "question": "Can I integrate a wearable device for health monitoring?",
+          "answer": "Our platform supports data integration from certain wearable devices like heart-rate monitors or fall-detection pendants. This enables caregivers and family members to monitor vital statistics more closely."
+        },
+        {
+          "question": "What if my internet connection is not stable?",
+          "answer": "We’ve designed the platform to handle slow or intermittent connections. If you lose connection while making changes, the system automatically saves your progress and updates once you’re back online."
+        },
+        {
+          "question": "How do I sign documents or forms electronically?",
+          "answer": "You can electronically sign care plans, consent forms, and other documents within our platform. Look for the 'E-Sign' option, review the document, and sign using your mouse, touchscreen, or stylus."
+        }
+      ]
+    },
+    {
+      "title": "Security & Privacy",
+      "icon": "/icons/faq/security.svg",
+      "questions": [
+        {
+          "question": "How do you protect my personal and health-related information?",
+          "answer": "We adhere to all relevant privacy regulations and employ secure data encryption, firewalls, and access controls. Our team undergoes regular training to ensure the highest level of confidentiality and data protection."
+        },
+        {
+          "question": "Who has access to my care plan and medical details?",
+          "answer": "Only authorized personnel such as your assigned caregiver, relevant medical professionals, and specific family members you designate have access. All access is logged and monitored for compliance."
+        },
+        {
+          "question": "Do you share my information with third-party organizations?",
+          "answer": "We only share information with your explicit consent or when mandated by law. For example, in emergency medical situations, we may disclose relevant data to healthcare professionals.",
+          "image": "/images/faq/privacy_policy.jpg"
+        },
+        {
+          "question": "How are caregiver background checks handled?",
+          "answer": "We conduct comprehensive background checks, including criminal records and reference verifications. We also monitor active certifications and ongoing training to ensure top-tier care standards."
+        },
+        {
+          "question": "Can I limit the information shared with my family members?",
+          "answer": "Yes. In your account settings, you can set specific permission levels for family members. This allows you to control how much information each authorized individual can see."
+        },
+        {
+          "question": "What if I suspect unauthorized access to my account?",
+          "answer": "Change your password immediately and contact our support team. We will investigate the incident, help secure your account, and recommend additional security measures if needed."
+        },
+        {
+          "question": "Do you store or record video calls or visits?",
+          "answer": "Video calls, if offered, are typically not recorded unless you explicitly opt in or it's required for specific medical documentation. Any recordings are stored securely and adhere to privacy regulations."
+        },
+        {
+          "question": "How do you handle data breaches or security incidents?",
+          "answer": "We have a detailed incident response plan. In the event of a breach, we will contain the issue, assess the impact, notify affected users, and take steps to prevent future occurrences."
+        },
+        {
+          "question": "Are there best practices I should follow to keep my information secure?",
+          "answer": "We recommend using strong passwords, updating them regularly, enabling two-factor authentication if available, and logging out after each session. Be cautious when accessing your account on public or shared devices."
+        },
+        {
+          "question": "Is my data deleted if I close my account?",
+          "answer": "Yes, upon request, we securely delete your personal information in accordance with legal and regulatory requirements. Some data may be retained for a specified period if required by law."
         }
       ]
     }
-  ]
+  ],
+  "contact": {
+    "title": "Contact Us",
+    "description": "Contact our dedicated support team for personalized assistance and expert help tailored to your needs",
+    "link": "/contact"
+  }
 }

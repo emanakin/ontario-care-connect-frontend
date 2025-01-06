@@ -1,0 +1,109 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.title {
+  color: #1e1d31;
+  text-align: center;
+  font-size: 2.75rem;
+  font-weight: 500;
+  margin: 1rem 0rem;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #e2e8f0;
+  position: relative;
+}
+
+.tab {
+  padding: 1rem 0.5rem;
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.iconWrapper {
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.icon {
+  filter: brightness(0) saturate(100%) invert(55%) sepia(12%) saturate(375%)
+    hue-rotate(176deg) brightness(94%) contrast(92%);
+  transition: filter 0.2s ease;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.tab:hover {
+  color: #3b82f6;
+}
+
+.tab:hover .icon {
+  filter: brightness(0) saturate(100%) invert(48%) sepia(85%) saturate(2151%)
+    hue-rotate(203deg) brightness(102%) contrast(95%);
+}
+
+.tab.active {
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+.tab.active .icon {
+  filter: brightness(0) saturate(100%) invert(48%) sepia(85%) saturate(2151%)
+    hue-rotate(203deg) brightness(102%) contrast(95%);
+}
+
+.tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #3b82f6;
+}
+
+.questionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .tabs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .tabs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .tab {
+    font-size: 1rem;
+  }
+}

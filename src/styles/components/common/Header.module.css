@@ -171,7 +171,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 75%;
+  width: 60%;
   padding: 1rem 2rem;
   height: 100vh;
   background-color: #ffffff;
@@ -196,7 +196,7 @@
 
 /* Mobile-only link styling in side menu */
 .mobileLink {
-  color: #141617d6;
+  color: #14161780;
   font-size: 1.25rem;
   font-weight: 600;
   text-decoration: none;
@@ -208,7 +208,7 @@
 }
 
 .mobileLink:hover {
-  color: #0f4c75;
+  color: #0f4c75b5;
 }
 
 .mobileLink:focus-visible {

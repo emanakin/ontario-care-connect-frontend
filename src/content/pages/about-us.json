@@ -1,34 +1,106 @@
 {
   "hero": {
     "title": {
-      "main": "About",
+      "main": "Our Story, Mission, and Commitment to",
       "sub": "ElderlyEase"
     },
-    "subtitle": "Dedicated to providing exceptional home care services with compassion and professionalism since 2020.",
+    "subtitle": "We believe every family deserves access to compassionate, personalized in-home care. Discover the vision that started here in Niagara and is paving the way for better care across Ontario.",
     "imageAlt": "Our care team at work",
-    "image": "/images/about-us/hero.jpeg"
+    "image": "/images/about/hero.jpeg"
   },
   "mission": {
-    "title": "Our Mission",
+    "title": "Our Mission & Values",
     "description": "To enhance the quality of life for seniors and their families through personalized, professional care services.",
-    "values": [
+    "cards": [
       {
         "title": "Compassion",
-        "description": "We approach every client with understanding and empathy"
+        "description": "We foster an environment of kindness and empathy, understanding the unique needs of every individual. Our commitment ensures that everyone we serve feels valued, respected, and genuinely cared for in their daily lives.",
+        "icon": "/icons/about/hand-heart.svg",
+        "link": "about/mission"
       },
       {
         "title": "Excellence",
-        "description": "We maintain the highest standards in care and service delivery"
+        "description": "Integrity is the cornerstone of our work. We uphold honesty and transparency in every interaction, building a foundation of trust and reliability for our clients and caregivers alike.",
+        "icon": "/icons/about/sheild.svg",
+        "link": "about/mission"
+      },
+      {
+        "title": "Integrity",
+        "description": "Reliability means being there when you need us most. We provide consistent, dependable support to families and individuals, ensuring peace of mind and unwavering trust in our services.",
+        "icon": "/icons/about/ribbon.svg",
+        "link": "about/mission"
       },
       {
         "title": "Reliability",
-        "description": "We are committed to being there when you need us most"
+        "description": "We celebrate diversity and individuality. Our approach is grounded in treating every person with dignity, creating a nurturing space where everyone feels valued and included.",
+        "icon": "/icons/about/handshake-heart.svg",
+        "link": "about/mission"
+      }
+    ]
+  },
+  "story": {
+    "title": "Our Story",
+    "description": "From humble beginnings in the heart of Niagara to a vision of province-wide care excellence, follow the journey of how one local's passion became ElderlyEase.",
+    "cards": [
+      {
+        "date": "2023",
+        "title": "A Local Vision Takes Root",
+        "description": "Born and raised in the Niagara region, Emmanuel Akinlosotu founded ElderlyEase as a sole proprietorship, driven by his deep connection to the community and firsthand understanding of local seniors' needs.",
+        "image": "/images/about/story-one.jpeg",
+        "imageAlt": "Emmanuel in Niagara region"
+      },
+      {
+        "date": "2024",
+        "title": "Building Strong Foundations",
+        "description": "Armed with a Computer Science degree from Wilfrid Laurier University and experience in healthcare, Emmanuel launches the ElderlyEase MVP focusing on four core service areas: personal care, companionship, respite care, and household assistance.",
+        "image": "/images/about/story-two.jpeg",
+        "imageAlt": "ElderlyEase services launch"
+      },
+      {
+        "date": "2025",
+        "title": "Regional Growth & Innovation",
+        "description": "Expanding services throughout the Niagara Peninsula, from Grimsby to Fort Erie. Implementation of innovative care-matching technology to ensure perfect caregiver-client partnerships.",
+        "image": "/images/about/story-three.jpeg",
+        "imageAlt": "Niagara region coverage"
+      },
+      {
+        "date": "2026",
+        "title": "Ontario-Wide Vision",
+        "description": "Setting sights on bringing our unique brand of compassionate care to major Ontario centers, while maintaining our commitment to personalized, community-focused service that started here in Niagara.",
+        "image": "/images/about/story-four.jpeg",
+        "imageAlt": "Ontario expansion vision"
       }
     ]
   },
   "team": {
-    "title": "Our Team",
+    "title": "Meet The Team",
     "description": "Meet the dedicated professionals who make our mission possible",
-    "members": []
+    "cards": [
+      {
+        "name": "Emmanuel Akinlosotu",
+        "role": "Founder",
+        "image": "/images/about/emmanuel-headshot.jpg",
+        "imageAlt": "Emmanuel Akinlosotu Headshot"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "image": "/images/faq/hero.jpg",
+    "imageAlt": "Frequently Asked Questions",
+    "cards": [
+      {
+        "title": "What is ElderlyEase?",
+        "body": "ElderlyEase is a home care agency that provides compassionate, personalized care to seniors in the Niagara region."
+      },
+      {
+        "title": "What is ElderlyEase?",
+        "body": "ElderlyEase is a home care agency that provides compassionate, personalized care to seniors in the Niagara region."
+      },
+      {
+        "title": "What is ElderlyEase?",
+        "body": "ElderlyEase is a home care agency that provides compassionate, personalized care to seniors in the Niagara region."
+      }
+    ]
   }
 }

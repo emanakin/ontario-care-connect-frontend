@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "@/styles/components/landing/FAQ.module.css";
-import ContactForm from "@/components/common/ContactForm";
+import ContactForm from "@/components/contact/ContactForm";
 import DropDownCard from "@/components/common/DropDownCard";
 import { motion } from "framer-motion";
 

@@ -8,21 +8,140 @@
     "imageAlt": "Collection of care resources and guides",
     "image": "/images/resources/hero.jpeg"
   },
-  "categories": [
-    {
-      "title": "Care Guides",
-      "description": "Comprehensive guides on various aspects of elderly care",
-      "resources": []
-    },
-    {
-      "title": "Articles",
-      "description": "Latest insights and tips for caregivers and families",
-      "resources": []
-    },
-    {
-      "title": "Tools",
-      "description": "Useful tools and calculators for care planning",
-      "resources": []
-    }
-  ]
+  "articles": {
+    "title": "Expert Care Resources",
+    "description": "Essential guides and insights for providing quality elderly care",
+    "articleList": [
+      {
+        "title": "Creating a Safe Home Environment for Seniors",
+        "description": "Learn how to prevent falls and accidents by making simple but effective modifications to your loved one's living space.",
+        "date": "2024-01-15",
+        "author": "Sarah Chen, OT",
+        "image": "/images/resources/articles/article-one.jpeg",
+        "imageAlt": "Senior woman confidently using a properly installed bathroom grab bar",
+        "link": "/articles/safe-home-environment",
+        "category": "article"
+      },
+      {
+        "title": "Understanding Dementia Care Basics",
+        "description": "A comprehensive guide to recognizing symptoms, communicating effectively, and providing compassionate care for loved ones with dementia.",
+        "date": "2024-01-10",
+        "author": "Dr. Michael Rodriguez",
+        "image": "/images/resources/articles/article-two.jpeg",
+        "imageAlt": "Caregiver helping senior with memory activities",
+        "link": "/articles/dementia-care-basics",
+        "category": "article"
+      },
+      {
+        "title": "Nutrition and Meal Planning for Elderly Adults",
+        "description": "Expert tips on preparing nutritious, easy-to-eat meals and maintaining proper hydration for seniors with varying dietary needs.",
+        "date": "2024-01-05",
+        "author": "Emma Thompson, RD",
+        "image": "/images/resources/articles/article-three.jpeg",
+        "imageAlt": "Colorful, healthy meal prepared for senior nutrition",
+        "link": "/articles/senior-nutrition-guide",
+        "category": "article"
+      },
+      {
+        "title": "Medication Management for Seniors",
+        "description": "A detailed guide to organizing medications, tracking doses, and ensuring safe and effective medication administration for elderly loved ones.",
+        "date": "2024-01-03",
+        "author": "Dr. Patricia Lee, PharmD",
+        "image": "/images/resources/articles/article-one.jpeg",
+        "imageAlt": "Senior woman confidently using a properly installed bathroom grab bar",
+        "link": "/articles/medication-management",
+        "category": "article"
+      },
+      {
+        "title": "Communication Strategies for Caregivers",
+        "description": "Effective techniques for clear and compassionate communication with seniors, especially those facing cognitive or hearing challenges.",
+        "date": "2023-12-28",
+        "author": "Maria Santos, SLP",
+        "image": "/images/resources/articles/article-two.jpeg",
+        "imageAlt": "Caregiver helping senior with memory activities",
+        "link": "/articles/caregiver-communication",
+        "category": "article"
+      },
+      {
+        "title": "Senior Social Activities Guide",
+        "description": "Creative ideas for keeping elderly adults socially engaged and mentally stimulated through various activities and community involvement.",
+        "date": "2023-12-20",
+        "author": "Jennifer Blake, MSW",
+        "image": "/images/resources/articles/article-three.jpeg",
+        "imageAlt": "Colorful, healthy meal prepared for senior nutrition",
+        "link": "/articles/senior-social-activities",
+        "category": "article"
+      },
+      {
+        "title": "Sleep Health for Older Adults",
+        "description": "Understanding sleep patterns in seniors and implementing strategies for better sleep quality and nighttime safety.",
+        "date": "2023-12-15",
+        "author": "Dr. Robert Chang",
+        "image": "/images/resources/articles/article-one.jpeg",
+        "imageAlt": "Senior woman confidently using a properly installed bathroom grab bar",
+        "link": "/articles/senior-sleep-health",
+        "category": "article"
+      },
+      {
+        "title": "Emergency Preparedness for Seniors",
+        "description": "Essential steps and resources for creating comprehensive emergency plans tailored to elderly adults' specific needs.",
+        "date": "2023-12-10",
+        "author": "Mark Johnson, EMT",
+        "image": "/images/resources/articles/article-two.jpeg",
+        "imageAlt": "Caregiver helping senior with memory activities",
+        "link": "/articles/emergency-preparedness",
+        "category": "article"
+      },
+      {
+        "title": "Technology Tools for Senior Care",
+        "description": "A curated guide to user-friendly technology solutions that can enhance safety, independence, and quality of life for elderly adults.",
+        "date": "2023-12-05",
+        "author": "David Kim, Tech Specialist",
+        "image": "/images/resources/articles/article-three.jpeg",
+        "imageAlt": "Colorful, healthy meal prepared for senior nutrition",
+        "link": "/articles/senior-tech-tools",
+        "category": "article"
+      }
+    ]
+  },
+  "blogs": {
+    "title": "Blogs",
+    "subtitle": "Find answers to common questions about our eldercare services. If you need more information, don't hesitate to reach out.",
+    "blogList": [
+      {
+        "title": "Believing neglected so so allowance existence departure",
+        "description": "Expert tips on preparing nutritious, easy-to-eat meals and maintaining proper hydration for seniors with varying dietary needs.",
+        "date": "2024-12-29",
+        "image": "/images/resources/blogs/blog-one.jpeg",
+        "imageAlt": "Caregiver helping senior",
+        "link": "/blog/senior-care-tips"
+      },
+      {
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "date": "2024-12-29",
+        "image": "/images/resources/blogs/blog-two.jpeg",
+        "imageAlt": "Senior care activities",
+        "link": "/blog/activities"
+      },
+      {
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "date": "2024-12-29",
+        "image": "/images/resources/blogs/blog-three.jpeg",
+        "imageAlt": "Healthcare consultation",
+        "link": "/blog/healthcare"
+      },
+      {
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "date": "2024-12-29",
+        "image": "/images/resources/blogs/blog-four.jpeg",
+        "imageAlt": "Family care support",
+        "link": "/blog/family-support"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Contact our dedicated support team for personalized assistance and expert help tailored to your needs",
+    "link": "/contact"
+  }
 }

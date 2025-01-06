@@ -1,0 +1,140 @@
+.container {
+  width: 100%;
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.textWrapper {
+  padding-right: 2rem;
+}
+
+.titles h2 {
+  color: #0a2472; /* Dark blue color from the image */
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.titles p {
+  color: #4a4a4a;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.contactInfo {
+  margin-bottom: 2.5rem;
+}
+
+.contactInfoItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.contactInfoIcon {
+  width: 40px;
+  height: 40px;
+  background-color: #e8f1ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.contactInfoIcon img {
+  width: 20px;
+  height: 20px;
+}
+
+.contactInfoText h3 {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.contactInfoText p {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.socialLinks {
+  margin-top: 2rem;
+}
+
+.socialLinks h3 {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.socialLinks a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #e8f1ff;
+  border-radius: 50%;
+  margin-right: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.socialLinks a:hover {
+  transform: translateY(-3px);
+}
+
+.socialLinks img {
+  width: 20px;
+  height: 20px;
+}
+
+.contactForm {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .textWrapper {
+    padding-right: 0;
+  }
+
+  .titles h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .titles h2 {
+    font-size: 1.75rem;
+  }
+
+  .socialLinks a {
+    width: 35px;
+    height: 35px;
+    margin-right: 0.75rem;
+  }
+}

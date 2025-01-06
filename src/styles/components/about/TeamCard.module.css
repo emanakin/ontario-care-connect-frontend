@@ -1,0 +1,77 @@
+.card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: white;
+  transition: transform 0.3s ease;
+  height: 400px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.banner h3 {
+  color: #4285f4;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.banner p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Styles for job position cards */
+.jobCard {
+  composes: card;
+  background: linear-gradient(135deg, #4285f4, #34a853);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.jobCard h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.jobCard p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
+}
+
+.jobCard button {
+  background: white;
+  color: #4285f4;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.jobCard button:hover {
+  transform: scale(1.05);
+}

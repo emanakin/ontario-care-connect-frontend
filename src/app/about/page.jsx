@@ -1,6 +1,11 @@
 import Hero from "@/components/common/Hero";
+import MissionContainer from "@/components/about/MissionContainer";
+import StoryContainer from "@/components/about/StoryContainer";
+import TeamContainer from "@/components/about/TeamContainer";
+import FAQ from "@/components/common/FAQ";
+
 import aboutContent from "@/content/pages/about-us.json";
-const { hero } = aboutContent;
+const { hero, mission, story, team, faq } = aboutContent;
 
 export const metadata = {
   title: "About Us | ElderlyEase",
@@ -20,7 +25,22 @@ export default function AboutPage() {
         image={hero.image}
         imageAlt={hero.imageAlt}
       />
-      {/* Additional About content will go here */}
+      <MissionContainer
+        title={mission.title}
+        description={mission.description}
+        cards={mission.cards}
+      />
+      <StoryContainer
+        title={story.title}
+        description={story.description}
+        cards={story.cards}
+      />
+      <TeamContainer
+        title={team.title}
+        description={team.description}
+        cards={team.cards}
+      />
+      <FAQ data={faq} />
     </>
   );
 }
